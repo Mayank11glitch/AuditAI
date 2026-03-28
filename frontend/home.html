@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>AuditAI | AI-Powered Financial Compliance</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary-container": "#00285d",
+                        "background": "#131313",
+                        "tertiary-fixed": "#acedff",
+                        "on-tertiary": "#003640",
+                        "on-secondary-container": "#aeb9d0",
+                        "outline-variant": "#424754",
+                        "on-tertiary-fixed-variant": "#004e5c",
+                        "surface-container-low": "#1c1b1b",
+                        "surface-container": "#201f1f",
+                        "on-tertiary-fixed": "#001f26",
+                        "on-secondary-fixed-variant": "#3c475a",
+                        "tertiary": "#4cd7f6",
+                        "on-primary-fixed-variant": "#004395",
+                        "surface-container-high": "#2a2a2a",
+                        "on-primary-fixed": "#001a42",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-variant": "#353534",
+                        "surface-dim": "#131313",
+                        "on-primary": "#002e6a",
+                        "on-background": "#e5e2e1",
+                        "inverse-on-surface": "#313030",
+                        "tertiary-container": "#009eb9",
+                        "on-secondary": "#263143",
+                        "tertiary-fixed-dim": "#4cd7f6",
+                        "primary": "#adc6ff",
+                        "on-tertiary-container": "#002f38",
+                        "on-surface": "#e5e2e1",
+                        "on-error-container": "#ffdad6",
+                        "inverse-primary": "#005ac2",
+                        "surface-bright": "#393939",
+                        "primary-fixed-dim": "#adc6ff",
+                        "error-container": "#93000a",
+                        "surface": "#131313",
+                        "secondary-fixed-dim": "#bcc7de",
+                        "secondary-container": "#3e495d",
+                        "surface-container-highest": "#353534",
+                        "secondary": "#bcc7de",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-secondary-fixed": "#111c2d",
+                        "secondary-fixed": "#d8e3fb",
+                        "on-surface-variant": "#c2c6d6",
+                        "primary-fixed": "#d8e2ff",
+                        "outline": "#8c909f",
+                        "primary-container": "#4d8eff",
+                        "surface-tint": "#adc6ff",
+                        "error": "#ffb4ab",
+                        "on-error": "#690005"
+                    },
+                    fontFamily: {
+                        "headline": ["Lexend"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+
+        .glass-card {
+            background: rgba(53, 53, 52, 0.6);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #adc6ff 0%, #4d8eff 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+        }
+
+        .cta-gradient {
+            background: linear-gradient(135deg, #adc6ff 0%, #4d8eff 100%);
+        }
+
+        .ghost-border {
+            border: 1px solid rgba(66, 71, 84, 0.15);
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-background font-body selection:bg-primary selection:text-on-primary-container">
+    <!-- TopNavBar -->
+    <nav
+        class="fixed top-0 z-50 w-full flex justify-between items-center px-6 py-3 backdrop-blur-md bg-opacity-80 bg-[#131313]">
+        <div class="flex items-center gap-8">
+            <span class="text-2xl font-bold tracking-tight text-blue-400 font-headline">AuditAI</span>
+            <div class="hidden md:flex gap-6 items-center">
+                <a class="text-blue-400 border-b-2 border-blue-400 pb-1 font-headline text-sm" href="#">Dashboard</a>
+                <a class="text-slate-400 hover:text-blue-200 transition-colors font-headline text-sm"
+                    href="#">Analytics</a>
+                <a class="text-slate-400 hover:text-blue-200 transition-colors font-headline text-sm"
+                    href="#">Reports</a>
+                <a class="text-slate-400 hover:text-blue-200 transition-colors font-headline text-sm"
+                    href="#">Settings</a>
+            </div>
+        </div>
+        <div class="flex items-center gap-4">
+            <div class="flex gap-3 mr-4">
+                <button
+                    class="p-2 text-on-surface-variant hover:bg-[#2a2a2a] rounded-md transition-all active:scale-95">
+                    <span class="material-symbols-outlined">notifications</span>
+                </button>
+                <button
+                    class="p-2 text-on-surface-variant hover:bg-[#2a2a2a] rounded-md transition-all active:scale-95">
+                    <span class="material-symbols-outlined">account_circle</span>
+                </button>
+            </div>
+            <button
+                class="cta-gradient px-5 py-2 rounded-lg text-on-primary-container font-headline font-semibold text-sm shadow-lg shadow-primary/20 hover:opacity-90 transition-opacity active:scale-95">
+                New Audit
+            </button>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <header class="relative pt-32 pb-20 px-6 overflow-hidden min-h-screen flex items-center justify-center">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[120px]"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-tertiary/10 rounded-full blur-[120px]"></div>
+        </div>
+        <div class="relative z-10 max-w-6xl w-full text-center">
+            <div
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high ghost-border mb-6">
+                <span class="w-2 h-2 rounded-full bg-tertiary"></span>
+                <span class="text-xs font-label uppercase tracking-widest text-on-surface-variant">Intelligent
+                    Compliance Protocol 2.4</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-headline font-extrabold tracking-tight mb-6 text-on-surface">
+                Autonomous <span class="text-gradient">Financial Integrity</span>
+            </h1>
+            <p class="max-w-2xl mx-auto text-xl text-on-surface-variant font-light mb-10 leading-relaxed">
+                Eliminate manual errors and regulatory risks. AuditAI leverages a multi-agent neural pipeline to process
+                compliance at machine speed.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <button
+                    class="cta-gradient px-8 py-4 rounded-xl text-on-primary-container font-headline font-bold text-lg w-full sm:w-auto">
+                    Initialize System Audit
+                </button>
+                <button
+                    class="px-8 py-4 rounded-xl border border-outline-variant text-on-surface font-headline font-semibold text-lg hover:bg-surface-container-high transition-colors w-full sm:w-auto">
+                    View Live Pipeline
+                </button>
+            </div>
+            <!-- Hero Insight Badge -->
+            <div class="mt-16 flex justify-center">
+                <div class="glass-card p-6 rounded-2xl ghost-border flex items-center gap-6 max-w-2xl text-left">
+                    <div class="flex-shrink-0 w-12 h-12 bg-error-container flex items-center justify-center rounded-xl">
+                        <span class="material-symbols-outlined text-error">warning</span>
+                    </div>
+                    <div>
+                        <p class="text-sm font-label text-error font-semibold uppercase tracking-wider mb-1">MSME Risk
+                            Advisory</p>
+                        <p class="text-on-surface leading-snug">Manual audits are expensive, slow, and error-prone.
+                            Avoid the <span class="text-error font-bold font-headline">₹10,000+ per violation</span>
+                            penalty risk with real-time detection.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Multi-Agent AI Pipeline (Bento Grid) -->
+    <section class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="mb-16">
+            <h2 class="text-3xl font-headline font-bold mb-4">Multi-Agent AI Pipeline</h2>
+            <div class="w-20 h-1 bg-tertiary rounded-full"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+            <!-- Agent 1: Document Parsing -->
+            <div class="md:col-span-8 glass-card rounded-3xl p-8 ghost-border relative overflow-hidden group">
+                <div class="absolute top-0 right-0 p-8 text-surface-container-highest">
+                    <span class="material-symbols-outlined text-8xl opacity-10">description</span>
+                </div>
+                <div class="relative z-10 flex flex-col h-full">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div
+                            class="w-10 h-10 bg-primary-container/20 flex items-center justify-center rounded-lg border border-primary/30">
+                            <span class="material-symbols-outlined text-primary">data_object</span>
+                        </div>
+                        <h3 class="text-2xl font-headline font-semibold">Document Parsing Agent</h3>
+                    </div>
+                    <p class="text-on-surface-variant text-lg mb-8 max-w-md">
+                        Neural OCR and computer vision layers extract high-fidelity data from unstructured receipts,
+                        invoices, and bank statements with 99.9% accuracy.
+                    </p>
+                    <div class="mt-auto grid grid-cols-2 gap-4">
+                        <div class="bg-surface-container-lowest p-4 rounded-xl">
+                            <p class="text-xs text-on-surface-variant uppercase mb-1">Processing Rate</p>
+                            <p class="text-2xl font-headline text-tertiary">420 Docs/Min</p>
+                        </div>
+                        <div class="bg-surface-container-lowest p-4 rounded-xl">
+                            <p class="text-xs text-on-surface-variant uppercase mb-1">Confidence Score</p>
+                            <p class="text-2xl font-headline text-primary">High Accuracy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Agent 2: Transaction Extraction -->
+            <div
+                class="md:col-span-4 bg-surface-container-low rounded-3xl p-8 ghost-border flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 bg-secondary-container/30 flex items-center justify-center rounded-2xl mb-6">
+                        <span class="material-symbols-outlined text-secondary">account_balance_wallet</span>
+                    </div>
+                    <h3 class="text-xl font-headline font-semibold mb-3">Transaction Extraction</h3>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">
+                        Automatic categorization of cash flows into ledger-ready entities, grouping by merchant, tax
+                        code, and department.
+                    </p>
+                </div>
+                <div class="mt-8 space-y-2">
+                    <div class="h-1 w-full bg-surface-container rounded-full overflow-hidden">
+                        <div class="h-full bg-secondary w-2/3"></div>
+                    </div>
+                    <p class="text-[10px] text-on-surface-variant font-label tracking-widest text-right">ORGANIZING
+                        FLOWS...</p>
+                </div>
+            </div>
+            <!-- Agent 3: Compliance Validator -->
+            <div
+                class="md:col-span-5 bg-surface-container-high rounded-3xl p-8 ghost-border border-l-4 border-l-tertiary">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="material-symbols-outlined text-tertiary">gavel</span>
+                    <h3 class="text-xl font-headline font-semibold">Compliance Validator</h3>
+                </div>
+                <p class="text-on-surface-variant mb-6">
+                    Cross-checking every entry against the latest GST/Regulatory mandates. Detecting anomalies in tax
+                    computation before they hit the portal.
+                </p>
+                <div class="space-y-3">
+                    <div class="flex justify-between items-center p-3 rounded-lg bg-surface-container-lowest">
+                        <span class="text-sm">GST Rule #42a</span>
+                        <span
+                            class="px-2 py-1 rounded bg-tertiary/10 text-tertiary text-[10px] font-bold">VERIFIED</span>
+                    </div>
+                    <div class="flex justify-between items-center p-3 rounded-lg bg-surface-container-lowest">
+                        <span class="text-sm">TDS Compliance</span>
+                        <span
+                            class="px-2 py-1 rounded bg-tertiary/10 text-tertiary text-[10px] font-bold">VERIFIED</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Agent 4: Explanation Agent -->
+            <div class="md:col-span-7 glass-card rounded-3xl p-8 ghost-border">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="material-symbols-outlined text-primary">chat_bubble_outline</span>
+                    <h3 class="text-xl font-headline font-semibold text-primary">Explanation Agent</h3>
+                </div>
+                <div
+                    class="bg-surface-container-lowest/50 p-6 rounded-2xl border border-outline-variant/10 italic text-on-surface mb-6 relative">
+                    <span
+                        class="material-symbols-outlined absolute -top-3 -left-3 text-primary text-3xl">format_quote</span>
+                    "The discrepancy in the Q3 ledger is due to an unlinked Input Tax Credit from Invoice #8821. I
+                    recommend immediate reconciliation to prevent a ₹15,000 fine."
+                </div>
+                <div class="flex items-center gap-4">
+                    <img class="w-10 h-10 rounded-full object-cover border border-primary"
+                        data-alt="professional woman in executive attire looking at laptop screen with a serious yet confident expression"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFHaC-BYxZJsxjHBvnNlGh0gxWA8uXtmjkPkPDXq3eDwFyCTbckC3ndm5aa25d1Rhazgk_TYnKlAzAn8TIoo7hGaZJW-yVXO5FTnEFoo2RpmC00tyscf0sAJZJGZdNluw416rGOrIcbBHwdMw4hQQFooFnHEzyNxtqDFmHa3whe8ph5UWt4ZR-yGYMQicTI4STRBj6HG1zRnh0ukRXF430B2mHSutwovXvGyM7id7TGwJ70FM6e26j5h9EreY7zNQ_LTUhtj0xHy0" />
+                    <div>
+                        <p class="text-xs font-label text-on-surface font-bold">Insight Delivery</p>
+                        <p class="text-[10px] text-on-surface-variant">Natural Language Audit Report Generated</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Financial Health Score Section -->
+    <section class="py-24 bg-surface-container-lowest relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-4xl font-headline font-bold mb-6">Real-time <span class="text-tertiary">Violation
+                        Detection</span></h2>
+                <p class="text-on-surface-variant text-lg mb-8 leading-relaxed">
+                    Our platform monitors your financial health 24/7. Don't wait for year-end reviews to find errors.
+                    Detect and resolve compliance drift as it happens.
+                </p>
+                <ul class="space-y-4">
+                    <li class="flex items-start gap-4">
+                        <span class="material-symbols-outlined text-tertiary mt-1">check_circle</span>
+                        <div>
+                            <p class="font-headline font-semibold">Zero-Latency Scanning</p>
+                            <p class="text-sm text-on-surface-variant">Continuous monitoring of all inbound and outbound
+                                transactions.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <span class="material-symbols-outlined text-tertiary mt-1">check_circle</span>
+                        <div>
+                            <p class="font-headline font-semibold">Drift Analysis</p>
+                            <p class="text-sm text-on-surface-variant">AI identifies pattern shifts that suggest
+                                potential audit triggers.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="relative flex justify-center">
+                <!-- Trust Gauge Component -->
+                <div class="relative w-80 h-80 flex items-center justify-center">
+                    <svg class="w-full h-full transform -rotate-90">
+                        <circle class="text-surface-container-high" cx="160" cy="160" fill="transparent" r="140"
+                            stroke="currentColor" stroke-width="20"></circle>
+                        <circle cx="160" cy="160" fill="transparent" r="140" stroke="url(#gradient-tertiary)"
+                            stroke-dasharray="880" stroke-dashoffset="132" stroke-linecap="round" stroke-width="20">
+                        </circle>
+                        <defs>
+                            <lineargradient id="gradient-tertiary" x1="0%" x2="100%" y1="0%" y2="0%">
+                                <stop offset="0%" stop-color="#4cd7f6"></stop>
+                                <stop offset="100%" stop-color="#009eb9"></stop>
+                            </lineargradient>
+                        </defs>
+                    </svg>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+                        <p class="text-xs font-label uppercase tracking-widest text-on-surface-variant mb-1">Health
+                            Score</p>
+                        <p class="text-6xl font-headline font-extrabold text-on-surface">85</p>
+                        <p class="text-sm font-headline text-tertiary mt-1">Optimal Status</p>
+                    </div>
+                    <!-- Traceability Thread Decor -->
+                    <div class="absolute -bottom-10 -right-10 glass-card p-4 rounded-xl ghost-border">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="w-2 h-2 rounded-full bg-error"></span>
+                            <p class="text-[10px] font-bold uppercase text-error">Warning</p>
+                        </div>
+                        <p class="text-xs font-body">GST Mismatch in Vendor #A92</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Statistics Section -->
+    <section class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="text-center">
+                <p class="text-4xl md:text-5xl font-headline font-bold text-primary mb-2">90%</p>
+                <p class="text-sm text-on-surface-variant uppercase tracking-widest">Cost Reduction</p>
+            </div>
+            <div class="text-center">
+                <p class="text-4xl md:text-5xl font-headline font-bold text-primary mb-2">10x</p>
+                <p class="text-sm text-on-surface-variant uppercase tracking-widest">Audit Speed</p>
+            </div>
+            <div class="text-center">
+                <p class="text-4xl md:text-5xl font-headline font-bold text-primary mb-2">0.0%</p>
+                <p class="text-sm text-on-surface-variant uppercase tracking-widest">Human Error</p>
+            </div>
+            <div class="text-center">
+                <p class="text-4xl md:text-5xl font-headline font-bold text-primary mb-2">12k+</p>
+                <p class="text-sm text-on-surface-variant uppercase tracking-widest">MSMEs Secured</p>
+            </div>
+        </div>
+    </section>
+    <!-- Footer / CTA -->
+    <footer class="bg-surface-container-lowest pt-20 pb-10 px-6 border-t border-outline-variant/10">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-10 mb-20">
+                <div class="max-w-md">
+                    <h3 class="text-3xl font-headline font-bold mb-4">Secure your <span class="text-gradient">Financial
+                            Future</span> today.</h3>
+                    <p class="text-on-surface-variant mb-6">Stop risking penalties and wasting manpower on manual
+                        compliance logs. Experience the power of the Luminal Auditor.</p>
+                    <div class="flex gap-4">
+                        <button
+                            class="cta-gradient px-6 py-3 rounded-lg text-on-primary-container font-headline font-bold">Start
+                            Free Trial</button>
+                        <button
+                            class="px-6 py-3 rounded-lg border border-outline-variant text-on-surface font-headline font-semibold">Talk
+                            to Specialist</button>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-12">
+                    <div>
+                        <p class="font-headline font-bold mb-4 text-on-surface">Platform</p>
+                        <ul class="space-y-2 text-on-surface-variant text-sm">
+                            <li><a class="hover:text-primary transition-colors" href="#">AI Pipeline</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Pricing</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">API Access</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Security</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="font-headline font-bold mb-4 text-on-surface">Company</p>
+                        <ul class="space-y-2 text-on-surface-variant text-sm">
+                            <li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Case Studies</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="flex flex-col md:flex-row justify-between items-center pt-10 border-t border-outline-variant/10 gap-6">
+                <span class="text-xl font-bold tracking-tight text-blue-400 font-headline">AuditAI</span>
+                <p class="text-xs text-on-surface-variant font-label uppercase tracking-[0.2em]">© 2024 AuditAI
+                    Technologies Pvt Ltd. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <span
+                        class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer">public</span>
+                    <span
+                        class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer">chat</span>
+                    <span
+                        class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer">mail</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- SideNavBar (Suppressed for landing focus as per shell visibility rule, but code structure defined if needed for dashboard screens) -->
+    <!-- The user is in the Home screen, a top-level landing destination. As per Responsive Pivot: use TopAppBar. -->
+</body>
+
+</html>

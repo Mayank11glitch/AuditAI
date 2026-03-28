@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Manrope', sans-serif; }
+        
+        /* Noise texture overlay */
+        .noise-bg {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            background-size: 200px 200px;
+        }
+
+        /* Perspective for 3D card */
+        .perspective-container {
+            perspective: 1500px;
+        }
+        
+        .tilt-card {
+            transition: transform 0.1s ease-out;
+            transform-style: preserve-3d;
+            will-change: transform;
+        }
+
+        /* Form input enhancements */
+        .input-highlight {
+            transition: opacity 0.3s ease;
+            opacity: 0;
+            z-index: -1;
+        }
+        .input-group:focus-within .input-highlight {
+            opacity: 1;
+        }
+        .input-group:focus-within .lucide {
+            color: white;
+        }
+        .input-group:focus-within input {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Animations */
+        @keyframes pulse-slow {
+            0%, 100% { transform: scale(0.98); opacity: 0.15; }
+            50% { transform: scale(1.02); opacity: 0.3; }
+        }
+        
+        @keyframes pulse-slower {
+            0%, 100% { transform: scale(1); opacity: 0.3; }
+            50% { transform: scale(1.1); opacity: 0.5; }
+        }
+        
+        @keyframes box-glow {
+            0%, 100% { box-shadow: 0 0 10px 2px rgba(255,255,255,0.03); opacity: 0.2; }
+            50% { box-shadow: 0 0 15px 5px rgba(255,255,255,0.05); opacity: 0.4; }
+        }
+
+        @keyframes travel-x {
+            0% { left: -50%; opacity: 0.3; filter: blur(1px); }
+            50% { top: auto; opacity: 0.7; filter: blur(2.5px); }
+            100% { left: 100%; opacity: 0.3; filter: blur(1px); }
+        }
+        
+        @keyframes travel-y {
+            0% { top: -50%; opacity: 0.3; filter: blur(1px); }
+            50% { opacity: 0.7; filter: blur(2.5px); }
+            100% { top: 100%; opacity: 0.3; filter: blur(1px); }
+        }
+
+        @keyframes travel-x-reverse {
+            0% { right: -50%; opacity: 0.3; filter: blur(1px); }
+            50% { right: 25%; opacity: 0.7; filter: blur(2.5px); }
+            100% { right: 100%; opacity: 0.3; filter: blur(1px); }
+        }
+        
+        @keyframes travel-y-reverse {
+            0% { bottom: -50%; opacity: 0.3; filter: blur(1px); }
+            50% { bottom: 25%; opacity: 0.7; filter: blur(2.5px); }
+            100% { bottom: 100%; opacity: 0.3; filter: blur(1px); }
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .anim-pulse-1 { animation: pulse-slow 8s infinite alternate ease-in-out; }
+        .anim-pulse-2 { animation: pulse-slower 6s infinite alternate ease-in-out; animation-delay: 1s; }
+        .anim-box-glow { animation: box-glow 4s infinite alternate ease-in-out; }
+        
+        .beam-top { animation: travel-x 2.5s infinite ease-in-out; }
+        .beam-right { animation: travel-y 2.5s infinite ease-in-out 0.6s; }
+        .beam-bottom { animation: travel-x-reverse 2.5s infinite ease-in-out 1.2s; }
+        .beam-left { animation: travel-y-reverse 2.5s infinite ease-in-out 1.8s; }
+
+        .btn-shimmer { animation: shimmer 2s infinite ease-in-out; }
+        .loading-spinner { animation: spin 1s linear infinite; }
+    </style>
+</head>
+<body class="min-h-screen w-screen bg-black relative flex items-center justify-center m-0 text-white overflow-x-hidden">
+
+    <!-- Video Background -->
+    <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none brightness-110">
+        <source src="hero-desktop.mp4" type="video/mp4" />
+    </video>
+    
+    <!-- Dark Overlay to ensure good contrast with the glass card -->
+    <div class="absolute inset-0 bg-black/10 z-0 pointer-events-none"></div>
+
+    <!-- Main Container -->
+    <div class="w-full max-w-sm relative z-10 perspective-container">
+        <!-- 3D Card -->
+        <div id="tilt-card" class="relative tilt-card group" onmousemove="handleMouseMove(event)" onmouseleave="handleMouseLeave()" onmouseenter="handleMouseEnter()">
+            <!-- Card Box Glow (Hover) -->
+            <div class="absolute -inset-[1px] rounded-[2rem] opacity-0 group-hover:opacity-70 transition-opacity duration-700 anim-box-glow pointer-events-none"></div>
+
+            <!-- Traveling Light Beams -->
+            <div class="absolute -inset-[1px] rounded-[2rem] overflow-hidden pointer-events-none">
+                <div class="absolute top-0 left-0 h-[3px] w-[50%] bg-gradient-to-r from-transparent via-white to-transparent opacity-70 beam-top"></div>
+                <div class="absolute top-0 right-0 h-[50%] w-[3px] bg-gradient-to-b from-transparent via-white to-transparent opacity-70 beam-right"></div>
+                <div class="absolute bottom-0 right-0 h-[3px] w-[50%] bg-gradient-to-r from-transparent via-white to-transparent opacity-70 beam-bottom"></div>
+                <div class="absolute bottom-0 left-0 h-[50%] w-[3px] bg-gradient-to-b from-transparent via-white to-transparent opacity-70 beam-left"></div>
+                
+                <!-- Corner glow dots -->
+                <div class="absolute top-0 left-0 h-[5px] w-[5px] rounded-full bg-white/40 blur-[1px] animate-pulse pointer-events-none"></div>
+                <div class="absolute top-0 right-0 h-[8px] w-[8px] rounded-full bg-white/60 blur-[2px] animate-pulse pointer-events-none" style="animation-delay: 0.5s;"></div>
+                <div class="absolute bottom-0 right-0 h-[8px] w-[8px] rounded-full bg-white/60 blur-[2px] animate-pulse pointer-events-none" style="animation-delay: 1s;"></div>
+                <div class="absolute bottom-0 left-0 h-[5px] w-[5px] rounded-full bg-white/40 blur-[1px] animate-pulse pointer-events-none" style="animation-delay: 1.5s;"></div>
+            </div>
+
+            <!-- Card Border Glow -->
+            <div class="absolute -inset-[0.5px] rounded-[2rem] bg-gradient-to-r from-white/10 via-white/20 to-white/10 opacity-0 group-hover:opacity-70 transition-opacity duration-500 pointer-events-none"></div>
+
+            <!-- Glass Content Surface -->
+            <div class="relative bg-black/40 backdrop-blur-xl rounded-[2rem] p-8 border border-white/5 shadow-2xl overflow-hidden">
+                <!-- Subtle grid pattern inside -->
+                <div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: linear-gradient(135deg, white 0.5px, transparent 0.5px), linear-gradient(45deg, white 0.5px, transparent 0.5px); background-size: 30px 30px;"></div>
+
+                <!-- Logo & Heading -->
+                <div class="text-center space-y-1 mb-8 relative z-10">
+                    <div class="mx-auto w-12 h-12 rounded-full border border-white/10 flex items-center justify-center relative overflow-hidden mb-4 bg-white/5 transition-transform hover:scale-105 duration-300">
+                        <span class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-white/70">A</span>
+                        <div class="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-50"></div>
+                    </div>
+                    <h1 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-white/80 tracking-tight">Welcome Back</h1>
+                    <p class="text-white/60 text-xs">Sign in to your professional workspace</p>
+                </div>
+
+                <!-- Form -->
+                <form id="login-form" class="space-y-4 relative z-10" onsubmit="handleSubmit(event)">
+                    
+                    <!-- Email Input -->
+                    <div class="input-group relative rounded-xl transition-transform duration-300 hover:scale-[1.01] focus-within:scale-[1.02] focus-within:z-10 group/input">
+                        <div class="absolute -inset-[0.5px] bg-gradient-to-r from-white/10 via-white/5 to-white/10 rounded-xl opacity-0 group-hover/input:opacity-100 transition-all duration-300 pointer-events-none"></div>
+                        <div class="relative flex items-center overflow-hidden rounded-xl bg-white/5 border border-transparent">
+                            <i data-lucide="mail" class="absolute left-4 w-4 h-4 text-white/40 transition-colors duration-300"></i>
+                            <input type="email" placeholder="Email address" class="w-full bg-transparent text-white placeholder:text-white/30 h-12 pl-12 pr-4 outline-none text-sm z-10" required />
+                            <div class="input-highlight absolute inset-0 bg-white/5 rounded-xl"></div>
+                        </div>
+                    </div>
+
+                    <!-- Password Input -->
+                    <div class="input-group relative rounded-xl transition-transform duration-300 hover:scale-[1.01] focus-within:scale-[1.02] focus-within:z-10 group/input">
+                        <div class="absolute -inset-[0.5px] bg-gradient-to-r from-white/10 via-white/5 to-white/10 rounded-xl opacity-0 group-hover/input:opacity-100 transition-all duration-300 pointer-events-none"></div>
+                        <div class="relative flex items-center overflow-hidden rounded-xl bg-white/5 border border-transparent">
+                            <i data-lucide="lock" class="absolute left-4 w-4 h-4 text-white/40 transition-colors duration-300"></i>
+                            <input type="password" id="password-input" placeholder="Password" class="w-full bg-transparent text-white placeholder:text-white/30 h-12 pl-12 pr-12 outline-none text-sm z-10" required />
+                            
+                            <!-- Toggle Visibility -->
+                            <button type="button" id="toggle-pwd" class="absolute right-4 z-20 focus:outline-none flex transition-colors text-white/40 hover:text-white">
+                                <i data-lucide="eye-off" id="icon-eye-off" class="w-4 h-4"></i>
+                                <i data-lucide="eye" id="icon-eye" class="w-4 h-4 hidden"></i>
+                            </button>
+                            <div class="input-highlight absolute inset-0 bg-white/5 rounded-xl"></div>
+                        </div>
+                    </div>
+
+                    <!-- Options -->
+                    <div class="flex items-center justify-between pt-2">
+                        <div class="flex items-center space-x-2 cursor-pointer relative group/rem" onclick="toggleCheckbox(event)">
+                            <div class="relative flex items-center justify-center w-4 h-4">
+                                <input type="checkbox" id="remember-me" tabindex="-1" class="pointer-events-none appearance-none h-4 w-4 rounded border border-white/20 bg-white/5 checked:bg-white transition-all duration-200" />
+                                <i data-lucide="check" id="check-icon" class="w-3 h-3 text-black absolute opacity-0 pointer-events-none transition-opacity duration-200" stroke-width="4"></i>
+                            </div>
+                            <label class="text-xs text-white/60 group-hover/rem:text-white/90 transition-colors duration-200 cursor-pointer pointer-events-none">Remember me</label>
+                        </div>
+                        <a href="#" class="text-xs text-white/60 hover:text-white transition-colors duration-200">Forgot password?</a>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" id="submit-btn" class="w-full relative group/button mt-6 pt-2 block">
+                        <!-- Button Glow -->
+                        <div class="absolute inset-0 bg-white/20 rounded-xl blur-lg opacity-0 group-hover/button:opacity-100 transition-opacity duration-300"></div>
+                        
+                        <div class="relative overflow-hidden bg-white text-black font-semibold h-12 rounded-xl transition-transform hover:scale-[1.02] active:scale-[0.98] duration-300 flex items-center justify-center outline-none">
+                            <!-- Shimmer -->
+                            <div id="btn-shimmer" class="absolute inset-0 bg-gradient-to-r from-transparent via-black/10 to-transparent opacity-0 z-0"></div>
+                            
+                            <!-- Default Text -->
+                            <span id="btn-text" class="relative z-10 flex items-center justify-center gap-2 text-[15px]">
+                                Sign In <i data-lucide="arrow-right" class="w-4 h-4 group-hover/button:translate-x-1 transition-transform"></i>
+                            </span>
+
+                            <!-- Loading Text -->
+                            <span id="btn-loading" class="relative z-10 hidden items-center justify-center">
+                                <div class="w-5 h-5 border-[3px] border-black/80 border-t-transparent rounded-full loading-spinner"></div>
+                            </span>
+                        </div>
+                    </button>
+
+                    <!-- Divider -->
+                    <div class="relative py-4 flex items-center opacity-80 animate-pulse">
+                        <div class="flex-grow border-t border-white/10"></div>
+                        <span class="mx-4 text-xs tracking-widest text-white/40 uppercase">or</span>
+                        <div class="flex-grow border-t border-white/10"></div>
+                    </div>
+
+                    <!-- Google Sign In -->
+                    <button type="button" class="w-full relative group/google">
+                        <div class="absolute inset-0 bg-white/5 rounded-xl blur opacity-0 group-hover/google:opacity-70 transition-opacity duration-300"></div>
+                        <div class="relative overflow-hidden bg-white/5 text-white/80 font-medium h-12 rounded-xl border border-white/10 group-hover/google:border-white/20 hover:text-white transition-all duration-300 flex items-center justify-center gap-3">
+                            <span class="font-bold text-lg leading-none">G</span>
+                            <span class="text-sm">Sign in with Google</span>
+                        </div>
+                    </button>
+
+                    <!-- Sign up -->
+                    <p class="text-center text-xs text-white/60 mt-6 pb-2">
+                        Don't have an account? 
+                        <a href="/signup" class="text-white font-medium hover:text-white/80 transition-colors underline decoration-white/30 underline-offset-4 ml-1">Sign up</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script Block -->
+    <script>
+        // Init Lucide Icons
+        lucide.createIcons();
+
+        // 3D Tilt Logic
+        const card = document.getElementById('tilt-card');
+        let isHovered = false;
+
+        function handleMouseEnter() {
+            isHovered = true;
+        }
+
+        function handleMouseMove(e) {
+            if (!isHovered) return;
+            const rect = card.getBoundingClientRect();
+            // Calculate mouse position relative to center of the card
+            // x, y ranges from roughly -0.5 to 0.5
+            const x = (e.clientX - rect.left - rect.width / 2) / rect.width;
+            const y = (e.clientY - rect.top - rect.height / 2) / rect.height;
+
+            // Map to rotation degrees (from the react prompt: rotateX [-10..10], rotateY [-10..10] approx)
+            const rotateX = -y * 20; // Up/down tilt
+            const rotateY = x * 20;  // Left/right tilt
+
+            // Use exact tilt logic requested by React component specs mapping
+            card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(10px)`;
+        }
+
+        function handleMouseLeave() {
+            isHovered = false;
+            // Smoothly reset tilt
+            card.style.transform = `rotateX(0deg) rotateY(0deg) translateZ(0px)`;
+        }
+
+        // Password visibility toggle
+        const togglePwd = document.getElementById('toggle-pwd');
+        const pwdInput = document.getElementById('password-input');
+        const iconEye = document.getElementById('icon-eye');
+        const iconEyeOff = document.getElementById('icon-eye-off');
+
+        togglePwd.addEventListener('click', () => {
+            if (pwdInput.type === 'password') {
+                pwdInput.type = 'text';
+                iconEye.classList.remove('hidden');
+                iconEyeOff.classList.add('hidden');
+            } else {
+                pwdInput.type = 'password';
+                iconEye.classList.add('hidden');
+                iconEyeOff.classList.remove('hidden');
+            }
+        });
+
+        // Custom checkbox toggle
+        function toggleCheckbox(e) {
+            e.preventDefault();
+            const checkbox = document.getElementById('remember-me');
+            const checkIcon = document.getElementById('check-icon');
+            checkbox.checked = !checkbox.checked;
+            
+            if (checkbox.checked) {
+                checkIcon.style.opacity = '1';
+            } else {
+                checkIcon.style.opacity = '0';
+            }
+        }
+
+        // Simulated Form Submit loading state
+        function handleSubmit(e) {
+            e.preventDefault();
+            const btnText = document.getElementById('btn-text');
+            const btnLoading = document.getElementById('btn-loading');
+            const btnShimmer = document.getElementById('btn-shimmer');
+            const submitBtn = document.getElementById('submit-btn');
+
+            // Swap text to loading spinner
+            btnText.classList.add('hidden');
+            btnLoading.classList.remove('hidden');
+            btnShimmer.classList.add('btn-shimmer'); // Use shimmer animation
+            btnShimmer.style.opacity = '1';
+            submitBtn.style.pointerEvents = 'none';
+
+            // Simulate 2 seconds request
+            setTimeout(() => {
+                btnText.classList.remove('hidden');
+                btnLoading.classList.add('hidden');
+                btnShimmer.classList.remove('btn-shimmer');
+                btnShimmer.style.opacity = '0';
+                submitBtn.style.pointerEvents = 'auto';
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

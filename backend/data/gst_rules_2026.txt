@@ -1,0 +1,155 @@
+CENTRAL GOODS AND SERVICES TAX (CGST) RULES, 2017 (Amended up to 2026)
+
+CHAPTER I: PRELIMINARY
+Rule 1: Short title and Commencement - Applies to the whole of India.
+Rule 2: Definitions - Defines terms used in the Act.
+
+CHAPTER II: COMPOSITION LEVY
+Rule 3: Intimation for composition levy - Traders must file an intimation prior to opting in.
+Rule 4: Effective date for composition levy - Valid from the beginning of the financial year.
+Rule 5: Conditions for composition levy - Taxpayer cannot make interstate outward supplies of goods.
+Rule 6: Validity of composition levy - Remains valid as long as conditions are met.
+Rule 7: Rate of tax of the composition levy - Fixed at 1% for traders and manufacturers, 5% for restaurants.
+
+CHAPTER III: REGISTRATION
+Rule 8: Application for registration - Every person liable to register must file within 30 days.
+Rule 9: Verification of the application and approval - Subject to physical or Aadhaar verification.
+Rule 10: Issue of registration certificate - Issued in FORM GST REG-06.
+Rule 10A: Furnishing of Bank Account Details - Required within 30 days or before GSTR-1 filing.
+Rule 10B: Aadhaar authentication - Mandatory for claiming refunds or revoking cancellation.
+Rule 11: Separate registration for multiple places of business - Allowed within a State.
+Rule 12: Registration for TDS/TCS - Specific rules for tax deductors.
+Rule 13: Grant of registration to non-resident taxable person - Valid for 90 days.
+Rule 14: Registration for OIDAR services - Specific process for online service providers outside India.
+Rule 15: Extension of casual/non-resident registration - Can be extended by 90 days.
+Rule 16: Suo moto registration - Officer can register a person during survey/inspection.
+Rule 17: Assignment of UIN - Given to UN bodies and embassies.
+Rule 18: Display of registration certificate - Mandatory to display GSTIN on the name board.
+Rule 19: Amendment of registration - Any change requires filing an amendment application.
+Rule 20: Application for cancellation of registration - Can be applied if business is closed.
+Rule 21: Registration cancelled in certain cases - For issuing invoices without supply, anti-profiteering.
+Rule 21A: Suspension of registration - Prior to cancellation, GSTIN gets suspended.
+Rule 22: Cancellation procedure - Officer must issue notice before cancelling.
+Rule 23: Revocation of cancellation - Can be filed within 30 days.
+Rule 24: Migration of persons - Transitional rule for older taxes.
+Rule 25: Physical verification - Officer can verify business premises post-registration.
+Rule 26: Method of authentication - DSC or EVC required.
+
+CHAPTER IV: DETERMINATION OF VALUE OF SUPPLY
+Rule 27: Value of supply where consideration is not wholly money - Based on open market value.
+Rule 28: Value of supply between related persons - Based on open market value or 90% of price charged to unrelated customers.
+Rule 29: Value of supply through an agent - Open market value or 90% of customer price.
+Rule 30: Value based on cost - 110% of the cost of production/provision.
+Rule 31: Residual method - Using reasonable means consistent with Section 15.
+Rule 31A: Value of lottery, betting, gambling - Based on face value of ticket.
+Rule 31D: Retail Sale Price (RSP)-based Valuation - Specifically for tobacco and allied products from Feb 2026.
+Rule 32: Value of foreign currency exchange - Based on RBI reference rate difference.
+Rule 32A: Value of supply by pure agent - Expenditure incurred excluded from value.
+Rule 33: Renting of motor vehicle - Specific valuation rules.
+Rule 34: Rate of exchange of currency - Based on CBIC notified rate for goods, GAAP for services.
+Rule 35: Value inclusive of taxes - Tax implicitly included in total amount.
+
+CHAPTER V: INPUT TAX CREDIT (ITC)
+Rule 36: Documentary requirements for ITC - Based on valid invoice matched with GSTR-2B. Strict requirement.
+Rule 37: Reversal of ITC for non-payment - If vendor is not paid within 180 days, ITC must be reversed with interest.
+Rule 37A: Reversal by recipient if supplier doesn't pay tax - Requires ITC reversal if GSTR-3B not filed by supplier.
+Rule 38: ITC for banks and financial institutions - 50% flat availability option.
+Rule 39: ISD Credit distribution - Based on turnover of recipient units.
+Rule 40: ITC for new registrations - Allows ITC on stock held on previous day.
+Rule 41: Transfer of ITC - Upon sale, merger, or demerger of business.
+Rule 41A: Transfer of credit for separate registrations - Allowed in same State.
+Rule 42: Reversal of ITC on inputs/services - For goods used partially for non-business or exempt supply.
+Rule 43: Reversal of ITC on Capital Goods - Capital goods used for exempt supplies require measured reversal.
+Rule 44: Manner of reversal under section 18(4) - When opting for composition.
+Rule 44A: Restrictions for certain goods.
+
+CHAPTER VI: TAX INVOICE, CREDIT AND DEBIT NOTES
+Rule 45: Tax invoice - Must contain 16 mandatory fields including GSTIN, HSN, Tax rate.
+Rule 46: Invoice for unregistered recipient - B2C invoices above 50,000 need recipient name/address.
+Rule 47: Bill of supply - For exempt goods or composition dealers.
+Rule 48: Manner of issuing invoice (E-Invoicing) - B2B invoices exceeding threshold must have IRN.
+Rule 49: Contents of bill of supply - Simpler format than tax invoice.
+Rule 50: Receipt voucher - Issued upon receiving advance payment.
+Rule 51: Refund voucher - Issued if supply doesn't happen after advance.
+Rule 52: Payment voucher - Required for Reverse Charge Mechanism payments to unregistered suppliers.
+Rule 53: Debit and credit notes - Must be linked to original invoice.
+Rule 54: Consolidated tax invoice - Allowed for banking, passenger transport.
+Rule 55: Transportation without invoice - Permitted with a delivery challan.
+Rule 55A: Tax invoice in certain cases.
+
+CHAPTER VII: ACCOUNTS AND RECORDS
+Rule 56: Maintenance of accounts - Stock, ITC, and output tax registers must be maintained.
+Rule 57: Records by warehouse operators - Must keep details of goods stored.
+Rule 58: Records by transporters - Must maintain record of goods transported.
+
+CHAPTER VIII: RETURNS
+Rule 59: Form and manner of outward supplies (GSTR-1) - Due by 11th of next month.
+Rule 60: Details of inward supplies (GSTR-2A/2B) - Auto-drafted based on vendor filings.
+Rule 61: Form of submission of return (GSTR-3B) - Due by 20th of next month.
+Rule 61A: Manual filing - Allowed only when notified.
+Rule 62: Return for composition levy (CMP-08/GSTR-4) - Quarterly payment, annual return.
+Rule 63: Non-resident return (GSTR-5).
+Rule 64: OIDAR return (GSTR-5A).
+Rule 65: Final return (GSTR-10) - Required within 3 months of cancellation.
+Rule 66: TDS return (GSTR-7) - Due by 10th of next month.
+Rule 67: TCS return (GSTR-8) - Due by 10th of next month.
+Rule 68: Notice for non-filing (GSTR-3A).
+Rule 69 to 79: Matching, Reversal, and Reclaim of ITC/Output Liability.
+Rule 80: Annual return (GSTR-9) - Due by 31st December of next financial year.
+Rule 81: Annual return for casual taxpayer.
+Rule 82: Audit by CA (GSTR-9C) - Required for turnover > 5 Crore.
+Rule 83, 83A, 84: GST Practitioner rules and exam.
+
+CHAPTER IX: PAYMENT OF TAX
+Rule 85: Electronic Liability Register - Tracks total tax due.
+Rule 86: Electronic Credit Ledger - Holds available ITC.
+Rule 86A: Blocking of ITC - Officer can block credit if fraud suspected.
+Rule 86B: Restrictions on use of ITC - 1% tax must be paid in cash by large businesses (with exemptions via 2026 amendments).
+Rule 87: Electronic Cash Ledger - Cash deposits for tax payment.
+Rule 88: Identification number for transactions.
+Rule 88A: Order of utilization of ITC - IGST first, then CGST/SGST.
+
+CHAPTER X: REFUND
+Rule 89: Application for refund - Must be filed in RFD-01.
+Rule 90: Acknowledgement of refund.
+Rule 91: Grant of provisional refund - 90% refund granted for zero-rated supplies.
+Rule 92: Order sanctioning refund.
+Rule 93: Interest on delayed refunds - Above 60 days.
+Rule 94: Disbursal of refund.
+Rule 95 to 97A: Refunds for embassies, exports, Consumer Welfare Fund.
+
+CHAPTER XI: ASSESSMENT AND AUDIT
+Rule 98: Provisional assessment - Granted if value/rate is undetermined.
+Rule 99: Scrutiny of returns - Notice in ASMT-10 for discrepancies.
+Rule 100: Assessment of non-filers/unregistered persons.
+Rule 101: Audit by tax authorities (ADT-01).
+Rule 102: Special audit (ADT-03) - Authorized by Assistant Commissioner.
+
+CHAPTER XII & XIII: ADVANCE RULING & APPEALS
+Rule 103 to 109: Advance Ruling procedures.
+Rule 109A to 119: Appeal processes to Appellate Authority and Tribunal. Requires pre-deposit of 10% of disputed tax.
+
+CHAPTER XIV: TRANSITIONAL PROVISIONS
+Rule 120 to 127: Handling of pre-GST stock credits.
+
+CHAPTER XV: ANTI-PROFITEERING
+Rule 128 to 137: Ensures tax reduction benefits are passed to consumers.
+
+CHAPTER XVI: E-WAY BILL
+Rule 138: Generation of e-way bill - Mandatory for goods movement above threshold (₹50k).
+Rule 138A: Documents to be carried - E-way bill copy and invoice.
+Rule 138B to 138E: Verification, inspection, and validity of e-way bills.
+
+CHAPTER XVII: INSPECTION, SEARCH AND SEIZURE
+Rule 139: Search and seizure (INS-01).
+Rule 140: Release of seized goods - On payment of bond.
+Rule 141 to 147: Custody, sale, and redemption of seized goods.
+
+CHAPTER XVIII: DEMANDS AND RECOVERY
+Rule 148 to 163: Payment in installments, garnishment, property attachment, and general penalties.
+
+CHAPTER XIX: SETTLEMENT AND NEW 2026 RULES
+Rule 164: Waiver of Interest/Penalties - Detailed procedure for closing older tax demand proceedings (2017-2020) under Section 128A.
+General Audit Guidelines 2026 Component: 
+165: Exact round number transactions are considered high fraud risk signals and require full documentation proof.
+166: Reverse Charge Mechanism (RCM) must be self-assessed on specific services (like transport, legal fees). Non-compliance attracts direct penalties.

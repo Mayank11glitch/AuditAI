@@ -1,0 +1,1320 @@
+🤖 Agent 2: Extracting Indian GST compliance rules from document...
+   ✅ Extracted 188 rules from document
+[
+  {
+    "id": 1,
+    "description": "Applicability of CGST Rules",
+    "condition": "CGST Rules, 2017 apply to the whole of India.",
+    "severity": "LOW",
+    "category": "GST"
+  },
+  {
+    "id": 2,
+    "description": "Definitions in CGST Rules",
+    "condition": "Terms used in the CGST Act are defined within these rules.",
+    "severity": "LOW",
+    "category": "GST"
+  },
+  {
+    "id": 3,
+    "description": "Intimation for Composition Levy",
+    "condition": "Traders must file an intimation prior to opting into the composition levy scheme.",
+    "severity": "MEDIUM",
+    "category": "Composition Levy"
+  },
+  {
+    "id": 4,
+    "description": "Effective Date for Composition Levy",
+    "condition": "Composition levy is valid from the beginning of the financial year.",
+    "severity": "LOW",
+    "category": "Composition Levy"
+  },
+  {
+    "id": 5,
+    "description": "Conditions for Composition Levy (Interstate Supplies)",
+    "condition": "A taxpayer opting for composition levy cannot make interstate outward supplies of goods.",
+    "severity": "HIGH",
+    "category": "Composition Levy"
+  },
+  {
+    "id": 6,
+    "description": "Validity of Composition Levy",
+    "condition": "Composition levy remains valid as long as the prescribed conditions are met.",
+    "severity": "MEDIUM",
+    "category": "Composition Levy"
+  },
+  {
+    "id": 7,
+    "description": "Composition Levy Tax Rates",
+    "condition": "Tax rates under composition levy are fixed at 1% for traders and manufacturers, and 5% for restaurants.",
+    "severity": "MEDIUM",
+    "category": "Composition Levy"
+  },
+  {
+    "id": 8,
+    "description": "GST Registration Application Deadline",
+    "condition": "Every person liable to register under GST must file an application within 30 days.",
+    "severity": "HIGH",
+    "category": "Registration"
+  },
+  {
+    "id": 9,
+    "description": "GST Registration Application Verification",
+    "condition": "GST registration applications are subject to physical verification or Aadhaar verification.",
+    "severity": "MEDIUM",
+    "category": "Registration"
+  },
+  {
+    "id": 10,
+    "description": "GST Registration Certificate Issuance",
+    "condition": "A GST registration certificate is issued in FORM GST REG-06 upon approval.",
+    "severity": "LOW",
+    "category": "Registration"
+  },
+  {
+    "id": 11,
+    "description": "Furnishing Bank Account Details Post-Registration",
+    "condition": "Bank account details are required to be furnished within 30 days of registration or before filing GSTR-1, whichever is earlier.",
+    "severity": "HIGH",
+    "category": "Registration"
+  },
+  {
+    "id": 12,
+    "description": "Mandatory Aadhaar Authentication",
+    "condition": "Aadhaar authentication is mandatory for claiming refunds or revoking cancellation of registration.",
+    "severity": "HIGH",
+    "category": "Registration"
+  },
+  {
+    "id": 13,
+    "description": "Separate Registration for Multiple Business Places",
+    "condition": "Separate GST registration is allowed for multiple places of business within the same State.",
+    "severity": "LOW",
+    "category": "Registration"
+  },
+  {
+    "id": 14,
+    "description": "Registration for TDS/TCS Deductors",
+    "condition": "Specific registration rules apply to persons liable to deduct TDS or collect TCS.",
+    "severity": "MEDIUM",
+    "category": "Registration"
+  },
+  {
+    "id": 15,
+    "description": "Non-Resident Taxable Person Registration Validity",
+    "condition": "Registration granted to a non-resident taxable person is valid for 90 days.",
+    "severity": "MEDIUM",
+    "category": "Registration"
+  },
+  {
+    "id": 16,
+    "description": "Registration for OIDAR Services",
+    "condition": "Online Information and Database Access or Retrieval (OIDAR) service providers outside India have a specific registration process.",
+    "severity": "MEDIUM",
+    "category": "Registration"
+  },
+  {
+    "id": 17,
+    "description": "Extension of Casual/Non-Resident Registration",
+    "condition": "Casual taxable person or non-resident taxable person registration can be extended by 90 days.",
+    "severity": "MEDIUM",
+    "category": "Registration"
+  },
+  {
+    "id": 18,
+    "description": "Suo Moto Registration by Officer",
+    "condition": "An officer can suo moto register a person during a survey or inspection if found liable.",
+    "severity": "HIGH",
+    "category": "Registration"
+  },
+  {
+    "id": 19,
+    "description": "Assignment of UIN",
+    "condition": "A Unique Identity Number (UIN) is assigned to UN bodies and embassies.",
+    "severity": "LOW",
+    "category": "Registration"
+  },
+  {
+    "id": 20,
+    "description": "Display of GSTIN",
+    "condition": "It is mandatory to display the GSTIN on the name board of the business premises.",
+    "severity": "MEDIUM",
+    "category": "Registration"
+  },
+  {
+    "id": 21,
+    "description": "Amendment of Registration",
+    "condition": "Any change in the registration details requires filing an amendment application.",
+    "severity": "MEDIUM",
+    "category": "Registration"
+  },
+  {
+    "id": 22,
+    "description": "Application for Registration Cancellation",
+    "condition": "An application for cancellation of registration can be filed if the business is closed or other specified conditions are met.",
+    "severity": "MEDIUM",
+    "category": "Registration"
+  },
+  {
+    "id": 23,
+    "description": "Grounds for Mandatory Registration Cancellation",
+    "condition": "Registration can be cancelled by authorities for issuing invoices without actual supply of goods or services, or for contravention of anti-profiteering provisions.",
+    "severity": "HIGH",
+    "category": "Registration"
+  },
+  {
+    "id": 24,
+    "description": "Suspension of Registration",
+    "condition": "Prior to cancellation, a GSTIN can be suspended.",
+    "severity": "HIGH",
+    "category": "Registration"
+  },
+  {
+    "id": 25,
+    "description": "Registration Cancellation Procedure",
+    "condition": "An officer must issue a show-cause notice before cancelling a registration.",
+    "severity": "MEDIUM",
+    "category": "Registration"
+  },
+  {
+    "id": 26,
+    "description": "Revocation of Registration Cancellation",
+    "condition": "An application for revocation of registration cancellation can be filed within 30 days of the cancellation order.",
+    "severity": "MEDIUM",
+    "category": "Registration"
+  },
+  {
+    "id": 27,
+    "description": "Migration of Existing Taxpayers",
+    "condition": "Specific transitional rules applied for migration of persons from older tax regimes to GST.",
+    "severity": "LOW",
+    "category": "Transitional"
+  },
+  {
+    "id": 28,
+    "description": "Post-Registration Physical Verification",
+    "condition": "An officer can physically verify business premises post-registration.",
+    "severity": "MEDIUM",
+    "category": "Registration"
+  },
+  {
+    "id": 29,
+    "description": "Document Authentication Method",
+    "condition": "Documents and applications must be authenticated using Digital Signature Certificate (DSC) or Electronic Verification Code (EVC).",
+    "severity": "MEDIUM",
+    "category": "GST"
+  },
+  {
+    "id": 30,
+    "description": "Valuation for Non-Monetary Consideration",
+    "condition": "Where consideration for supply is not wholly in money, the value of supply is based on open market value.",
+    "severity": "MEDIUM",
+    "category": "Valuation"
+  },
+  {
+    "id": 31,
+    "description": "Valuation for Related Party Transactions",
+    "condition": "Value of supply between related persons is based on open market value or 90% of the price charged to unrelated customers.",
+    "severity": "MEDIUM",
+    "category": "Valuation"
+  },
+  {
+    "id": 32,
+    "description": "Valuation for Supply through an Agent",
+    "condition": "Value of supply through an agent is based on open market value or 90% of the customer price.",
+    "severity": "MEDIUM",
+    "category": "Valuation"
+  },
+  {
+    "id": 33,
+    "description": "Valuation Based on Cost",
+    "condition": "Where other valuation methods are not applicable, value can be determined as 110% of the cost of production or provision of services.",
+    "severity": "MEDIUM",
+    "category": "Valuation"
+  },
+  {
+    "id": 34,
+    "description": "Residual Valuation Method",
+    "condition": "If other specific valuation rules fail, value is determined using reasonable means consistent with the principles of Section 15 of the CGST Act.",
+    "severity": "MEDIUM",
+    "category": "Valuation"
+  },
+  {
+    "id": 35,
+    "description": "Valuation of Lottery, Betting, Gambling",
+    "condition": "Value of supply for lottery, betting, and gambling is based on the face value of the ticket or total amount paid.",
+    "severity": "MEDIUM",
+    "category": "Valuation"
+  },
+  {
+    "id": 36,
+    "description": "RSP-Based Valuation (Tobacco Products)",
+    "condition": "From February 2026, Retail Sale Price (RSP)-based valuation applies specifically to tobacco and allied products.",
+    "severity": "MEDIUM",
+    "category": "Valuation"
+  },
+  {
+    "id": 37,
+    "description": "Valuation of Foreign Currency Exchange",
+    "condition": "Value of foreign currency exchange is based on the difference between the RBI reference rate and the actual rate, or 1% of the gross amount exchanged.",
+    "severity": "MEDIUM",
+    "category": "Valuation"
+  },
+  {
+    "id": 38,
+    "description": "Valuation of Supply by Pure Agent",
+    "condition": "Expenditure incurred by a pure agent is excluded from the value of supply if specific conditions are met.",
+    "severity": "LOW",
+    "category": "Valuation"
+  },
+  {
+    "id": 39,
+    "description": "Valuation of Motor Vehicle Renting",
+    "condition": "Specific valuation rules apply to the renting of motor vehicles.",
+    "severity": "LOW",
+    "category": "Valuation"
+  },
+  {
+    "id": 40,
+    "description": "Currency Exchange Rate for GST Valuation",
+    "condition": "Rate of exchange of currency is based on the CBIC notified rate for goods and generally accepted accounting principles (GAAP) for services.",
+    "severity": "MEDIUM",
+    "category": "Valuation"
+  },
+  {
+    "id": 41,
+    "description": "Valuation When Price is Inclusive of Taxes",
+    "condition": "If the value of supply is stated to be inclusive of taxes, the tax amount is calculated implicitly from the total amount.",
+    "severity": "LOW",
+    "category": "Valuation"
+  },
+  {
+    "id": 42,
+    "description": "ITC Documentary Requirement and Matching",
+    "condition": "Input Tax Credit (ITC) can only be claimed based on a valid invoice and must be matched with GSTR-2B data. This is a strict requirement.",
+    "severity": "HIGH",
+    "category": "ITC"
+  },
+  {
+    "id": 43,
+    "description": "ITC Reversal for Non-Payment to Vendor",
+    "condition": "If a vendor is not paid within 180 days from the date of invoice, claimed ITC must be reversed along with interest.",
+    "severity": "HIGH",
+    "category": "ITC"
+  },
+  {
+    "id": 44,
+    "description": "ITC Reversal for Supplier Non-Payment of Tax",
+    "condition": "ITC must be reversed by the recipient if the supplier does not file GSTR-3B and pay the corresponding tax.",
+    "severity": "HIGH",
+    "category": "ITC"
+  },
+  {
+    "id": 45,
+    "description": "ITC for Banks and Financial Institutions",
+    "condition": "Banks and financial institutions have an option to claim 50% of the eligible ITC.",
+    "severity": "LOW",
+    "category": "ITC"
+  },
+  {
+    "id": 46,
+    "description": "Input Service Distributor (ISD) Credit Distribution",
+    "condition": "ITC distributed by an Input Service Distributor (ISD) must be based on the turnover of the recipient units.",
+    "severity": "MEDIUM",
+    "category": "ITC"
+  },
+  {
+    "id": 47,
+    "description": "ITC for New Registrations",
+    "condition": "New registrants can claim ITC on stock held on the day immediately preceding the date of registration.",
+    "severity": "MEDIUM",
+    "category": "ITC"
+  },
+  {
+    "id": 48,
+    "description": "Transfer of ITC (Business Restructuring)",
+    "condition": "ITC can be transferred upon the sale, merger, or demerger of a business.",
+    "severity": "MEDIUM",
+    "category": "ITC"
+  },
+  {
+    "id": 49,
+    "description": "ITC Transfer for Separate Registrations (Same State)",
+    "condition": "Transfer of credit is allowed between separate registrations of the same person within the same State.",
+    "severity": "LOW",
+    "category": "ITC"
+  },
+  {
+    "id": 50,
+    "description": "ITC Reversal for Common Inputs/Services",
+    "condition": "ITC on inputs and input services must be reversed proportionately if used partially for non-business purposes or for making exempt supplies.",
+    "severity": "HIGH",
+    "category": "ITC"
+  },
+  {
+    "id": 51,
+    "description": "ITC Reversal for Common Capital Goods",
+    "condition": "ITC on capital goods used for making exempt supplies requires a measured reversal over their useful life.",
+    "severity": "HIGH",
+    "category": "ITC"
+  },
+  {
+    "id": 52,
+    "description": "ITC Reversal on Opting for Composition",
+    "condition": "Specific rules apply for ITC reversal when a regular taxpayer opts for the composition scheme (under Section 18(4)).",
+    "severity": "HIGH",
+    "category": "ITC"
+  },
+  {
+    "id": 53,
+    "description": "ITC Restrictions for Specific Goods",
+    "condition": "Restrictions apply to ITC claims for certain specified goods.",
+    "severity": "HIGH",
+    "category": "ITC"
+  },
+  {
+    "id": 54,
+    "description": "Mandatory Fields for Tax Invoice",
+    "condition": "A tax invoice must contain 16 mandatory fields, including GSTIN, HSN code, and tax rate.",
+    "severity": "HIGH",
+    "category": "Invoice"
+  },
+  {
+    "id": 55,
+    "description": "Invoice Details for Unregistered Recipients (B2C)",
+    "condition": "B2C invoices for amounts above \u20b950,000 need recipient name/address.",
+    "severity": "MEDIUM",
+    "category": "Invoice"
+  },
+  {
+    "id": 56,
+    "description": "Issuance of Bill of Supply",
+    "condition": "A bill of supply is issued for exempt goods or by composition dealers instead of a tax invoice.",
+    "severity": "MEDIUM",
+    "category": "Invoice"
+  },
+  {
+    "id": 57,
+    "description": "E-Invoicing Mandate",
+    "condition": "B2B invoices exceeding the prescribed threshold must be issued as e-invoices with a valid Invoice Reference Number (IRN).",
+    "severity": "HIGH",
+    "category": "Invoice"
+  },
+  {
+    "id": 58,
+    "description": "Contents of Bill of Supply",
+    "condition": "A bill of supply has a simpler format with fewer mandatory fields compared to a tax invoice.",
+    "severity": "LOW",
+    "category": "Invoice"
+  },
+  {
+    "id": 59,
+    "description": "Issuance of Receipt Voucher",
+    "condition": "A receipt voucher must be issued upon receiving an advance payment for a supply.",
+    "severity": "MEDIUM",
+    "category": "Invoice"
+  },
+  {
+    "id": 60,
+    "description": "Issuance of Refund Voucher",
+    "condition": "A refund voucher must be issued if the supply does not materialize after an advance payment has been received.",
+    "severity": "MEDIUM",
+    "category": "Invoice"
+  },
+  {
+    "id": 61,
+    "description": "Issuance of Payment Voucher (RCM)",
+    "condition": "A payment voucher is required for Reverse Charge Mechanism (RCM) payments made to unregistered suppliers.",
+    "severity": "HIGH",
+    "category": "Invoice"
+  },
+  {
+    "id": 62,
+    "description": "Issuance of Debit and Credit Notes",
+    "condition": "Debit and credit notes must be linked to the original tax invoice and comply with specified formats.",
+    "severity": "MEDIUM",
+    "category": "Invoice"
+  },
+  {
+    "id": 63,
+    "description": "Consolidated Tax Invoice",
+    "condition": "Consolidated tax invoices are allowed for specific sectors like banking and passenger transport services.",
+    "severity": "LOW",
+    "category": "Invoice"
+  },
+  {
+    "id": 64,
+    "description": "Transportation with Delivery Challan",
+    "condition": "Transportation of goods without an invoice is permitted using a delivery challan in specific circumstances, such as removal for job work.",
+    "severity": "MEDIUM",
+    "category": "Invoice"
+  },
+  {
+    "id": 65,
+    "description": "Special Tax Invoice Cases",
+    "condition": "Specific requirements for tax invoices apply in certain specialized cases not covered by other general rules.",
+    "severity": "LOW",
+    "category": "Invoice"
+  },
+  {
+    "id": 66,
+    "description": "Mandatory Accounts and Records Maintenance",
+    "condition": "Taxpayers must maintain proper accounts, including stock registers, ITC registers, and output tax registers.",
+    "severity": "HIGH",
+    "category": "Records"
+  },
+  {
+    "id": 67,
+    "description": "Records by Warehouse Operators",
+    "condition": "Warehouse operators must maintain detailed records of goods stored or handled by them.",
+    "severity": "MEDIUM",
+    "category": "Records"
+  },
+  {
+    "id": 68,
+    "description": "Records by Transporters",
+    "condition": "Transporters must maintain records of goods transported, along with details of consigner and consignee.",
+    "severity": "MEDIUM",
+    "category": "Records"
+  },
+  {
+    "id": 69,
+    "description": "GSTR-1 Filing Deadline and Manner",
+    "condition": "Details of outward supplies (GSTR-1) must be filed by the 11th of the succeeding month.",
+    "severity": "HIGH",
+    "category": "Filing"
+  },
+  {
+    "id": 70,
+    "description": "GSTR-2A/2B Auto-Drafting of Inward Supplies",
+    "condition": "Details of inward supplies (GSTR-2A/2B) are auto-drafted based on vendor filings.",
+    "severity": "LOW",
+    "category": "Filing"
+  },
+  {
+    "id": 71,
+    "description": "GSTR-3B Filing Deadline and Form",
+    "condition": "The summary return (GSTR-3B) must be filed by the 20th of the succeeding month.",
+    "severity": "HIGH",
+    "category": "Filing"
+  },
+  {
+    "id": 72,
+    "description": "Manual Return Filing Conditions",
+    "condition": "Manual filing of returns is allowed only when specifically notified by the authorities under exceptional circumstances.",
+    "severity": "LOW",
+    "category": "Filing"
+  },
+  {
+    "id": 73,
+    "description": "Composition Levy Returns (CMP-08/GSTR-4)",
+    "condition": "Taxpayers under composition levy must make quarterly payments (CMP-08) and file an annual return (GSTR-4).",
+    "severity": "HIGH",
+    "category": "Filing"
+  },
+  {
+    "id": 74,
+    "description": "Non-Resident Taxable Person Return (GSTR-5)",
+    "condition": "Non-resident taxable persons must file GSTR-5.",
+    "severity": "HIGH",
+    "category": "Filing"
+  },
+  {
+    "id": 75,
+    "description": "OIDAR Service Provider Return (GSTR-5A)",
+    "condition": "OIDAR service providers must file GSTR-5A.",
+    "severity": "HIGH",
+    "category": "Filing"
+  },
+  {
+    "id": 76,
+    "description": "Final Return Filing (GSTR-10) Deadline",
+    "condition": "A final return (GSTR-10) is required to be filed within 3 months of the date of cancellation of registration.",
+    "severity": "HIGH",
+    "category": "Filing"
+  },
+  {
+    "id": 77,
+    "description": "TDS Return Filing (GSTR-7) Deadline",
+    "condition": "Tax Deducted at Source (TDS) return (GSTR-7) must be filed by the 10th of the succeeding month.",
+    "severity": "HIGH",
+    "category": "Filing"
+  },
+  {
+    "id": 78,
+    "description": "TCS Return Filing (GSTR-8) Deadline",
+    "condition": "Tax Collected at Source (TCS) return (GSTR-8) must be filed by the 10th of the succeeding month.",
+    "severity": "HIGH",
+    "category": "Filing"
+  },
+  {
+    "id": 79,
+    "description": "Notice for Non-Filing of Returns (GSTR-3A)",
+    "condition": "A notice in FORM GSTR-3A can be issued by the proper officer for non-filing of returns.",
+    "severity": "HIGH",
+    "category": "Filing"
+  },
+  {
+    "id": 80,
+    "description": "Matching of Input Tax Credit details (Rule 69)",
+    "condition": "Rule 69 specifies the procedure for matching of input tax credit claimed by the recipient with the details furnished by the supplier.",
+    "severity": "HIGH",
+    "category": "ITC"
+  },
+  {
+    "id": 81,
+    "description": "Communication of Discrepancies (Rule 70)",
+    "condition": "Rule 70 details the communication of discrepancies in input tax credit and output tax liability.",
+    "severity": "MEDIUM",
+    "category": "ITC"
+  },
+  {
+    "id": 82,
+    "description": "Reversal of ITC on Matching Discrepancies (Rule 71)",
+    "condition": "Rule 71 specifies the conditions and procedure for reversal of input tax credit on account of matching discrepancies.",
+    "severity": "HIGH",
+    "category": "ITC"
+  },
+  {
+    "id": 83,
+    "description": "Reclaim of Reversed ITC (Rule 72)",
+    "condition": "Rule 72 outlines the procedure for reclaim of input tax credit that was previously reversed.",
+    "severity": "MEDIUM",
+    "category": "ITC"
+  },
+  {
+    "id": 84,
+    "description": "Matching of Output Tax Details (Rule 73)",
+    "condition": "Rule 73 specifies the procedure for matching of output tax details furnished by the supplier.",
+    "severity": "HIGH",
+    "category": "Filing"
+  },
+  {
+    "id": 85,
+    "description": "Communication of Output Tax Discrepancies (Rule 74)",
+    "condition": "Rule 74 details the communication of discrepancies in output tax liability furnished by the supplier.",
+    "severity": "MEDIUM",
+    "category": "Filing"
+  },
+  {
+    "id": 86,
+    "description": "Reversal of Output Tax Liability (Rule 75)",
+    "condition": "Rule 75 specifies the conditions and procedure for reversal of output tax liability due to discrepancies.",
+    "severity": "HIGH",
+    "category": "Filing"
+  },
+  {
+    "id": 87,
+    "description": "Procedure for Rectification of Errors (Rule 76)",
+    "condition": "Rule 76 outlines the procedure for rectification of errors in returns after communication of discrepancies.",
+    "severity": "MEDIUM",
+    "category": "Filing"
+  },
+  {
+    "id": 88,
+    "description": "Matching of Taxable Supply Details (Rule 77)",
+    "condition": "Rule 77 covers the matching of taxable supply details provided by suppliers and recipients.",
+    "severity": "MEDIUM",
+    "category": "Filing"
+  },
+  {
+    "id": 89,
+    "description": "Non-matching & Duplication of Claimed ITC (Rule 78)",
+    "condition": "Rule 78 addresses cases of non-matching or duplication of claimed input tax credit.",
+    "severity": "HIGH",
+    "category": "ITC"
+  },
+  {
+    "id": 90,
+    "description": "Final Acceptance of Matched ITC (Rule 79)",
+    "condition": "Rule 79 specifies the final acceptance criteria for matched input tax credit.",
+    "severity": "LOW",
+    "category": "ITC"
+  },
+  {
+    "id": 91,
+    "description": "Annual Return Filing (GSTR-9) Deadline",
+    "condition": "The annual return (GSTR-9) must be filed by 31st December of the next financial year.",
+    "severity": "HIGH",
+    "category": "Filing"
+  },
+  {
+    "id": 92,
+    "description": "Annual Return for Casual Taxpayer",
+    "condition": "Casual taxpayers have specific requirements for filing their annual return, as distinct from regular taxpayers.",
+    "severity": "MEDIUM",
+    "category": "Filing"
+  },
+  {
+    "id": 93,
+    "description": "GST Audit by CA (GSTR-9C) Threshold",
+    "condition": "Reconciliation statement (GSTR-9C) certified by a Chartered Accountant is required for taxpayers with turnover exceeding \u20b95 Crore.",
+    "severity": "HIGH",
+    "category": "Audit"
+  },
+  {
+    "id": 94,
+    "description": "GST Practitioner Eligibility (Rule 83)",
+    "condition": "Rule 83 defines the eligibility criteria for enrollment as a Goods and Services Tax Practitioner (GSTP).",
+    "severity": "LOW",
+    "category": "GST"
+  },
+  {
+    "id": 95,
+    "description": "GST Practitioner Examination (Rule 83A)",
+    "condition": "Rule 83A outlines the examination requirements for individuals to qualify as GST Practitioners.",
+    "severity": "LOW",
+    "category": "GST"
+  },
+  {
+    "id": 96,
+    "description": "Duties of GST Practitioner (Rule 84)",
+    "condition": "Rule 84 specifies the duties and responsibilities of a GST Practitioner.",
+    "severity": "LOW",
+    "category": "GST"
+  },
+  {
+    "id": 97,
+    "description": "Electronic Liability Register Usage",
+    "condition": "The Electronic Liability Register tracks the total tax due from a taxpayer and records all liabilities.",
+    "severity": "LOW",
+    "category": "Payment"
+  },
+  {
+    "id": 98,
+    "description": "Electronic Credit Ledger Usage",
+    "condition": "The Electronic Credit Ledger holds the available Input Tax Credit for a taxpayer, to be used for discharging tax liability.",
+    "severity": "LOW",
+    "category": "Payment"
+  },
+  {
+    "id": 99,
+    "description": "Blocking of Input Tax Credit",
+    "condition": "An officer can block a taxpayer's Electronic Credit Ledger if fraud or other specified irregularities are suspected.",
+    "severity": "HIGH",
+    "category": "ITC"
+  },
+  {
+    "id": 100,
+    "description": "ITC Utilization Restriction (Rule 86B)",
+    "condition": "Large businesses (with exemptions via 2026 amendments) must pay at least 1% of their total tax liability in cash, restricting full ITC utilization.",
+    "severity": "HIGH",
+    "category": "Payment"
+  },
+  {
+    "id": 101,
+    "description": "Electronic Cash Ledger Usage",
+    "condition": "The Electronic Cash Ledger holds cash deposits made by taxpayers for tax payments.",
+    "severity": "LOW",
+    "category": "Payment"
+  },
+  {
+    "id": 102,
+    "description": "Identification Number for GST Transactions",
+    "condition": "Specific identification numbers (e.g., CIN, CPIN) are used for tracking GST payment transactions.",
+    "severity": "LOW",
+    "category": "Payment"
+  },
+  {
+    "id": 103,
+    "description": "Order of ITC Utilization",
+    "condition": "Input Tax Credit must be utilized in a specific order: IGST first, then CGST and SGST/UTGST.",
+    "severity": "MEDIUM",
+    "category": "Payment"
+  },
+  {
+    "id": 104,
+    "description": "Refund Application Form (RFD-01)",
+    "condition": "An application for refund must be filed in FORM RFD-01.",
+    "severity": "MEDIUM",
+    "category": "Refund"
+  },
+  {
+    "id": 105,
+    "description": "Acknowledgement of Refund Application",
+    "condition": "An acknowledgement is issued upon successful filing of a refund application.",
+    "severity": "LOW",
+    "category": "Refund"
+  },
+  {
+    "id": 106,
+    "description": "Provisional Refund for Zero-Rated Supplies",
+    "condition": "90% provisional refund can be granted for zero-rated supplies.",
+    "severity": "LOW",
+    "category": "Refund"
+  },
+  {
+    "id": 107,
+    "description": "Refund Sanction Order",
+    "condition": "An order sanctioning the refund is issued by the proper officer after verification.",
+    "severity": "LOW",
+    "category": "Refund"
+  },
+  {
+    "id": 108,
+    "description": "Interest on Delayed Refunds",
+    "condition": "Interest is payable on refunds delayed beyond 60 days from the date of application submission.",
+    "severity": "LOW",
+    "category": "Refund"
+  },
+  {
+    "id": 109,
+    "description": "Disbursal of Refund Amount",
+    "condition": "Specific procedures apply for the disbursal of sanctioned refund amounts to the applicant.",
+    "severity": "LOW",
+    "category": "Refund"
+  },
+  {
+    "id": 110,
+    "description": "Refunds for Embassies (Rule 95)",
+    "condition": "Rule 95 specifies conditions and procedures for claiming refunds by Embassies and international organizations.",
+    "severity": "LOW",
+    "category": "Refund"
+  },
+  {
+    "id": 111,
+    "description": "Refunds for Exports of Services (Rule 96)",
+    "condition": "Rule 96 outlines procedures for refund of integrated tax paid on export of services.",
+    "severity": "LOW",
+    "category": "Refund"
+  },
+  {
+    "id": 112,
+    "description": "Refunds to Consumer Welfare Fund (Rule 97)",
+    "condition": "Rule 97 governs the crediting of unclaimed refunds to the Consumer Welfare Fund.",
+    "severity": "LOW",
+    "category": "Refund"
+  },
+  {
+    "id": 113,
+    "description": "Refund to Unregistered Persons (Rule 97A)",
+    "condition": "Rule 97A specifies procedures for refund claims by unregistered persons in specific cases.",
+    "severity": "LOW",
+    "category": "Refund"
+  },
+  {
+    "id": 114,
+    "description": "Provisional Assessment",
+    "condition": "Provisional assessment is granted if the value or rate of tax cannot be determined at the time of supply.",
+    "severity": "MEDIUM",
+    "category": "Assessment"
+  },
+  {
+    "id": 115,
+    "description": "Scrutiny of Returns and Discrepancies",
+    "condition": "Returns can be scrutinized by the proper officer, and a notice in FORM ASMT-10 can be issued for discrepancies.",
+    "severity": "HIGH",
+    "category": "Assessment"
+  },
+  {
+    "id": 116,
+    "description": "Assessment of Non-Filers/Unregistered Persons",
+    "condition": "Procedures for assessment apply to persons who fail to file returns or are unregistered but liable to pay tax.",
+    "severity": "HIGH",
+    "category": "Assessment"
+  },
+  {
+    "id": 117,
+    "description": "Audit by Tax Authorities (ADT-01)",
+    "condition": "Tax authorities can conduct an audit of records, and a notice in FORM ADT-01 is issued for this purpose.",
+    "severity": "HIGH",
+    "category": "Audit"
+  },
+  {
+    "id": 118,
+    "description": "Special Audit Mandate (ADT-03)",
+    "condition": "A special audit can be mandated by an Assistant Commissioner in FORM ADT-03 under specific circumstances.",
+    "severity": "HIGH",
+    "category": "Audit"
+  },
+  {
+    "id": 119,
+    "description": "Application for Advance Ruling (Rule 103)",
+    "condition": "Rule 103 specifies the form and manner of filing an application for an Advance Ruling.",
+    "severity": "LOW",
+    "category": "Appeals"
+  },
+  {
+    "id": 120,
+    "description": "Procedure on Receipt of Advance Ruling Application (Rule 104)",
+    "condition": "Rule 104 outlines the procedure to be followed by the Authority for Advance Ruling upon receipt of an application.",
+    "severity": "LOW",
+    "category": "Appeals"
+  },
+  {
+    "id": 121,
+    "description": "Procedure for Hearing and Decision on Advance Ruling (Rule 105)",
+    "condition": "Rule 105 details the procedure for hearing and pronouncement of the decision by the Authority for Advance Ruling.",
+    "severity": "LOW",
+    "category": "Appeals"
+  },
+  {
+    "id": 122,
+    "description": "Rectification of Mistakes in Advance Ruling (Rule 106)",
+    "condition": "Rule 106 provides for the rectification of apparent mistakes in an Advance Ruling order.",
+    "severity": "LOW",
+    "category": "Appeals"
+  },
+  {
+    "id": 123,
+    "description": "Appeal to Appellate Authority Against Advance Ruling (Rule 107)",
+    "condition": "Rule 107 specifies the procedure for filing an appeal against an Advance Ruling order to the Appellate Authority.",
+    "severity": "LOW",
+    "category": "Appeals"
+  },
+  {
+    "id": 124,
+    "description": "Procedure for Appellate Authority on Advance Ruling (Rule 108)",
+    "condition": "Rule 108 outlines the procedure to be followed by the Appellate Authority for Advance Ruling.",
+    "severity": "LOW",
+    "category": "Appeals"
+  },
+  {
+    "id": 125,
+    "description": "Orders of Appellate Authority for Advance Ruling (Rule 109)",
+    "condition": "Rule 109 covers the issuance and effect of orders passed by the Appellate Authority for Advance Ruling.",
+    "severity": "LOW",
+    "category": "Appeals"
+  },
+  {
+    "id": 126,
+    "description": "Application for Appeal to Appellate Authority (Rule 109A)",
+    "condition": "Rule 109A specifies the application process for appeals to the Appellate Authority against decisions of adjudicating authorities.",
+    "severity": "MEDIUM",
+    "category": "Appeals"
+  },
+  {
+    "id": 127,
+    "description": "General Procedure for Appeals to Appellate Authority (Rule 110)",
+    "condition": "Rule 110 outlines the general procedure for handling appeals by the Appellate Authority.",
+    "severity": "MEDIUM",
+    "category": "Appeals"
+  },
+  {
+    "id": 128,
+    "description": "Filing of Appeal by Department (Rule 111)",
+    "condition": "Rule 111 details the process for departmental authorities to file appeals.",
+    "severity": "LOW",
+    "category": "Appeals"
+  },
+  {
+    "id": 129,
+    "description": "Acknowledgement of Appeal Filing (Rule 112)",
+    "condition": "Rule 112 mandates the issuance of an acknowledgement upon receipt of an appeal application.",
+    "severity": "LOW",
+    "category": "Appeals"
+  },
+  {
+    "id": 130,
+    "description": "Appellate Tribunal Procedure (Rule 113)",
+    "condition": "Rule 113 defines the general procedure for appeals before the Goods and Services Tax Appellate Tribunal.",
+    "severity": "MEDIUM",
+    "category": "Appeals"
+  },
+  {
+    "id": 131,
+    "description": "Form of Appeal to Appellate Tribunal (Rule 114)",
+    "condition": "Rule 114 specifies the form and manner in which an appeal to the Appellate Tribunal must be filed.",
+    "severity": "MEDIUM",
+    "category": "Appeals"
+  },
+  {
+    "id": 132,
+    "description": "Memorandum of Cross-objections (Rule 115)",
+    "condition": "Rule 115 provides for filing a memorandum of cross-objections by the respondent in an appeal before the Tribunal.",
+    "severity": "LOW",
+    "category": "Appeals"
+  },
+  {
+    "id": 133,
+    "description": "Fees for Appeals and Applications (Rule 116)",
+    "condition": "Rule 116 prescribes the fees payable for filing appeals and other applications before the Appellate Tribunal.",
+    "severity": "LOW",
+    "category": "Appeals"
+  },
+  {
+    "id": 134,
+    "description": "Procedure for Hearing of Appeals by Tribunal (Rule 117)",
+    "condition": "Rule 117 outlines the procedure for hearing of appeals by the Appellate Tribunal.",
+    "severity": "MEDIUM",
+    "category": "Appeals"
+  },
+  {
+    "id": 135,
+    "description": "Orders of Appellate Tribunal (Rule 118)",
+    "condition": "Rule 118 specifies the orders that can be passed by the Appellate Tribunal and their communication.",
+    "severity": "LOW",
+    "category": "Appeals"
+  },
+  {
+    "id": 136,
+    "description": "Pre-Deposit for Appeals to Tribunal (Rule 119)",
+    "condition": "Filing an appeal to the Appellate Authority or Tribunal requires a pre-deposit of 10% of the disputed tax amount.",
+    "severity": "HIGH",
+    "category": "Appeals"
+  },
+  {
+    "id": 137,
+    "description": "Transitional ITC on Stock (Rule 120)",
+    "condition": "Rule 120 outlines the mechanism for claiming transitional input tax credit on closing stock held on the appointed day.",
+    "severity": "MEDIUM",
+    "category": "Transitional"
+  },
+  {
+    "id": 138,
+    "description": "Declaration for Transitional Credit (Rule 121)",
+    "condition": "Rule 121 specifies the requirement to file a declaration (FORM GST TRAN-1) for claiming transitional credit.",
+    "severity": "MEDIUM",
+    "category": "Transitional"
+  },
+  {
+    "id": 139,
+    "description": "Transitional Credit for Capital Goods (Rule 122)",
+    "condition": "Rule 122 provides specific provisions for claiming transitional credit on capital goods.",
+    "severity": "MEDIUM",
+    "category": "Transitional"
+  },
+  {
+    "id": 140,
+    "description": "Transitional Credit for Services (Rule 123)",
+    "condition": "Rule 123 covers the claim of transitional credit on services received prior to the appointed day but tax paid later.",
+    "severity": "MEDIUM",
+    "category": "Transitional"
+  },
+  {
+    "id": 141,
+    "description": "Unavailed CENVAT Credit (Rule 124)",
+    "condition": "Rule 124 allows for carrying forward unavailed CENVAT credit from the previous regime.",
+    "severity": "MEDIUM",
+    "category": "Transitional"
+  },
+  {
+    "id": 142,
+    "description": "Refunding Transitional Credit (Rule 125)",
+    "condition": "Rule 125 deals with the procedure for refunding transitional credits.",
+    "severity": "LOW",
+    "category": "Transitional"
+  },
+  {
+    "id": 143,
+    "description": "Revision of Declaration (Rule 126)",
+    "condition": "Rule 126 permits the revision of declarations filed for claiming transitional credit.",
+    "severity": "LOW",
+    "category": "Transitional"
+  },
+  {
+    "id": 144,
+    "description": "Non-admissibility of Transitional Credit (Rule 127)",
+    "condition": "Rule 127 specifies conditions under which transitional credit may not be admissible.",
+    "severity": "HIGH",
+    "category": "Transitional"
+  },
+  {
+    "id": 145,
+    "description": "Anti-Profiteering Authority (Rule 128)",
+    "condition": "Rule 128 establishes the National Anti-Profiteering Authority to monitor the passing of tax benefits to consumers.",
+    "severity": "LOW",
+    "category": "Anti-Profiteering"
+  },
+  {
+    "id": 146,
+    "description": "Procedure for Anti-Profiteering Complaints (Rule 129)",
+    "condition": "Rule 129 outlines the procedure for filing and investigating complaints related to anti-profiteering.",
+    "severity": "HIGH",
+    "category": "Anti-Profiteering"
+  },
+  {
+    "id": 147,
+    "description": "Investigation by DGAP (Rule 130)",
+    "condition": "Rule 130 details the investigation process by the Director General of Anti-Profiteering (DGAP).",
+    "severity": "HIGH",
+    "category": "Anti-Profiteering"
+  },
+  {
+    "id": 148,
+    "description": "Reference to NAA (Rule 131)",
+    "condition": "Rule 131 specifies the conditions under which the DGAP refers findings to the National Anti-Profiteering Authority (NAA).",
+    "severity": "MEDIUM",
+    "category": "Anti-Profiteering"
+  },
+  {
+    "id": 149,
+    "description": "Powers of NAA (Rule 132)",
+    "condition": "Rule 132 describes the powers vested with the National Anti-Profiteering Authority to ensure compliance.",
+    "severity": "LOW",
+    "category": "Anti-Profiteering"
+  },
+  {
+    "id": 150,
+    "description": "Order of NAA (Rule 133)",
+    "condition": "Rule 133 specifies the nature of orders that can be passed by the National Anti-Profiteering Authority.",
+    "severity": "HIGH",
+    "category": "Anti-Profiteering"
+  },
+  {
+    "id": 151,
+    "description": "Manner of Deposit of Amount (Rule 134)",
+    "condition": "Rule 134 prescribes the manner of deposit of the amount determined by the NAA into the Consumer Welfare Fund.",
+    "severity": "MEDIUM",
+    "category": "Anti-Profiteering"
+  },
+  {
+    "id": 152,
+    "description": "Penalties for Non-Compliance (Rule 135)",
+    "condition": "Rule 135 outlines penalties for non-compliance with anti-profiteering provisions.",
+    "severity": "HIGH",
+    "category": "Anti-Profiteering"
+  },
+  {
+    "id": 153,
+    "description": "Appeals against NAA Orders (Rule 136)",
+    "condition": "Rule 136 allows for appeals against the orders passed by the National Anti-Profiteering Authority.",
+    "severity": "LOW",
+    "category": "Anti-Profiteering"
+  },
+  {
+    "id": 154,
+    "description": "Power to Modify Orders (Rule 137)",
+    "condition": "Rule 137 grants power to the NAA to modify its own orders under certain conditions.",
+    "severity": "LOW",
+    "category": "Anti-Profiteering"
+  },
+  {
+    "id": 155,
+    "description": "Mandatory E-Way Bill Generation",
+    "condition": "Generation of an e-way bill is mandatory for the movement of goods exceeding a threshold value of \u20b950,000.",
+    "severity": "HIGH",
+    "category": "E-Way Bill"
+  },
+  {
+    "id": 156,
+    "description": "Documents for Goods Movement (E-Way Bill & Invoice)",
+    "condition": "During the movement of goods, a copy of the e-way bill and the invoice must be carried by the person in charge of the conveyance.",
+    "severity": "HIGH",
+    "category": "E-Way Bill"
+  },
+  {
+    "id": 157,
+    "description": "Verification of E-Way Bills (Rule 138B)",
+    "condition": "Rule 138B specifies the procedure for verification of e-way bills by proper officers during transit.",
+    "severity": "HIGH",
+    "category": "E-Way Bill"
+  },
+  {
+    "id": 158,
+    "description": "Inspection of Goods and Conveyances (Rule 138C)",
+    "condition": "Rule 138C outlines the procedure for inspection of goods and conveyances in transit.",
+    "severity": "HIGH",
+    "category": "E-Way Bill"
+  },
+  {
+    "id": 159,
+    "description": "Validity Period of E-Way Bills (Rule 138D)",
+    "condition": "Rule 138D defines the validity period of e-way bills based on the distance or type of movement.",
+    "severity": "MEDIUM",
+    "category": "E-Way Bill"
+  },
+  {
+    "id": 160,
+    "description": "Blocking of E-Way Bill Generation (Rule 138E)",
+    "condition": "Rule 138E allows for the blocking of e-way bill generation for non-filers of GST returns.",
+    "severity": "HIGH",
+    "category": "E-Way Bill"
+  },
+  {
+    "id": 161,
+    "description": "Search and Seizure Procedure (INS-01)",
+    "condition": "Procedures for search and seizure operations are outlined, with authorization in FORM INS-01 by a competent authority.",
+    "severity": "HIGH",
+    "category": "Enforcement"
+  },
+  {
+    "id": 162,
+    "description": "Release of Seized Goods on Bond",
+    "condition": "Seized goods can be released upon the payment of a bond or security, as per specified conditions.",
+    "severity": "HIGH",
+    "category": "Enforcement"
+  },
+  {
+    "id": 163,
+    "description": "Custody of Seized Goods (Rule 141)",
+    "condition": "Rule 141 details the procedures for the custody of seized goods.",
+    "severity": "MEDIUM",
+    "category": "Enforcement"
+  },
+  {
+    "id": 164,
+    "description": "Perishable/Hazardous Goods Sale (Rule 142)",
+    "condition": "Rule 142 provides for the immediate sale of perishable or hazardous seized goods.",
+    "severity": "MEDIUM",
+    "category": "Enforcement"
+  },
+  {
+    "id": 165,
+    "description": "Procedure of Sale of Seized Goods (Rule 143)",
+    "condition": "Rule 143 outlines the general procedure for the sale of seized goods.",
+    "severity": "MEDIUM",
+    "category": "Enforcement"
+  },
+  {
+    "id": 166,
+    "description": "Disposal of Proceeds of Sale (Rule 144)",
+    "condition": "Rule 144 details how the proceeds from the sale of seized goods are to be disposed.",
+    "severity": "MEDIUM",
+    "category": "Enforcement"
+  },
+  {
+    "id": 167,
+    "description": "Confiscation of Goods and Conveyances (Rule 145)",
+    "condition": "Rule 145 specifies the conditions leading to the confiscation of goods and conveyances.",
+    "severity": "HIGH",
+    "category": "Enforcement"
+  },
+  {
+    "id": 168,
+    "description": "Redemption Fine (Rule 146)",
+    "condition": "Rule 146 covers the levy of redemption fine in lieu of confiscation of goods.",
+    "severity": "HIGH",
+    "category": "Enforcement"
+  },
+  {
+    "id": 169,
+    "description": "Payment of Tax and Penalty on Seized Goods (Rule 147)",
+    "condition": "Rule 147 outlines the payment of tax and penalty related to seized goods and conveyances.",
+    "severity": "HIGH",
+    "category": "Enforcement"
+  },
+  {
+    "id": 170,
+    "description": "Payment of Tax in Installments (Rule 148)",
+    "condition": "Rule 148 allows for payment of tax, interest, and penalty in installments under certain conditions.",
+    "severity": "MEDIUM",
+    "category": "Enforcement"
+  },
+  {
+    "id": 171,
+    "description": "Recovery through Deduction (Rule 149)",
+    "condition": "Rule 149 provides for recovery of dues by deduction from any money due to the defaulter.",
+    "severity": "HIGH",
+    "category": "Enforcement"
+  },
+  {
+    "id": 172,
+    "description": "Recovery by Attachment of Debt (Rule 150)",
+    "condition": "Rule 150 allows for recovery by attachment of any debt due to the defaulter.",
+    "severity": "HIGH",
+    "category": "Enforcement"
+  },
+  {
+    "id": 173,
+    "description": "Recovery by Sale of Movable Property (Rule 151)",
+    "condition": "Rule 151 details the procedure for recovery of dues by sale of the defaulter's movable property.",
+    "severity": "HIGH",
+    "category": "Enforcement"
+  },
+  {
+    "id": 174,
+    "description": "Recovery by Sale of Immovable Property (Rule 152)",
+    "condition": "Rule 152 specifies the procedure for recovery of dues by sale of the defaulter's immovable property.",
+    "severity": "HIGH",
+    "category": "Enforcement"
+  },
+  {
+    "id": 175,
+    "description": "Recovery from Third Persons (Rule 153)",
+    "condition": "Rule 153 enables recovery of dues from third persons holding money for or on account of the defaulter.",
+    "severity": "HIGH",
+    "category": "Enforcement"
+  },
+  {
+    "id": 176,
+    "description": "Recovery by Arrest and Detention (Rule 154)",
+    "condition": "Rule 154 provides for recovery of dues by arrest and detention of the defaulter in certain cases.",
+    "severity": "HIGH",
+    "category": "Enforcement"
+  },
+  {
+    "id": 177,
+    "description": "Recovery through Departmental Proceedings (Rule 155)",
+    "condition": "Rule 155 specifies procedures for recovery through departmental proceedings.",
+    "severity": "MEDIUM",
+    "category": "Enforcement"
+  },
+  {
+    "id": 178,
+    "description": "Recovery by Other Methods (Rule 156)",
+    "condition": "Rule 156 allows for recovery by other methods as prescribed in the Act.",
+    "severity": "MEDIUM",
+    "category": "Enforcement"
+  },
+  {
+    "id": 179,
+    "description": "Specific Procedure for Recovery (Rule 157)",
+    "condition": "Rule 157 outlines specific procedures for recovery in cases of distinct persons or separate registrations.",
+    "severity": "MEDIUM",
+    "category": "Enforcement"
+  },
+  {
+    "id": 180,
+    "description": "Provisional Attachment of Property (Rule 158)",
+    "condition": "Rule 158 allows for provisional attachment of property to protect revenue in certain circumstances.",
+    "severity": "HIGH",
+    "category": "Enforcement"
+  },
+  {
+    "id": 181,
+    "description": "Summary Assessment (Rule 159)",
+    "condition": "Rule 159 provides for summary assessment in cases where the proper officer believes it is necessary to protect revenue.",
+    "severity": "HIGH",
+    "category": "Enforcement"
+  },
+  {
+    "id": 182,
+    "description": "Special Provisions for Recovery (Rule 160)",
+    "condition": "Rule 160 includes special provisions for recovery from certain categories of persons.",
+    "severity": "MEDIUM",
+    "category": "Enforcement"
+  },
+  {
+    "id": 183,
+    "description": "General Penalties for Contravention (Rule 161)",
+    "condition": "Rule 161 refers to the application of general penalties for contraventions of the Act or rules for which no specific penalty is provided.",
+    "severity": "HIGH",
+    "category": "Enforcement"
+  },
+  {
+    "id": 184,
+    "description": "Power to Waive Penalty (Rule 162)",
+    "condition": "Rule 162 outlines the conditions under which the proper officer may waive the penalty.",
+    "severity": "LOW",
+    "category": "Enforcement"
+  },
+  {
+    "id": 185,
+    "description": "Rectification of Errors in Order (Rule 163)",
+    "condition": "Rule 163 provides for the rectification of errors apparent on the face of record in any order passed.",
+    "severity": "LOW",
+    "category": "Enforcement"
+  },
+  {
+    "id": 186,
+    "description": "Waiver of Interest/Penalties for Older Demands (Rule 164)",
+    "condition": "Detailed procedures are provided for waiver of interest and penalties for closing older tax demand proceedings (2017-2020) under Section 128A.",
+    "severity": "MEDIUM",
+    "category": "Settlement"
+  },
+  {
+    "id": 187,
+    "description": "Fraud Risk for Round Number Transactions (Rule 165)",
+    "condition": "Exact round number transactions are considered high fraud risk signals and require full documentation proof from February 2026.",
+    "severity": "HIGH",
+    "category": "Fraud"
+  },
+  {
+    "id": 188,
+    "description": "Mandatory RCM Self-Assessment and Penalties (Rule 166)",
+    "condition": "Reverse Charge Mechanism (RCM) must be self-assessed on specific services (e.g., transport, legal fees), and non-compliance attracts direct penalties.",
+    "severity": "HIGH",
+    "category": "RCM"
+  }
+]

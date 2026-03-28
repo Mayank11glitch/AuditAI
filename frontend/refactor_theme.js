@@ -1,0 +1,50 @@
+const fs = require('fs');
+const path = require('path');
+
+const targetDirs = ['src/pages', 'src/components/layout', 'src/components/ui'];
+
+const replacements = [
+    { from: /text-white\b/g, to: 'text-on-surface' },
+    { from: /text-white\/([0-9]+)/g, to: 'text-on-surface/$1' },
+    { from: /bg-\[#0a0a0b\]/g, to: 'bg-background' },
+    { from: /bg-\[#111113\]/g, to: 'bg-surface' },
+    { from: /bg-white\/5\b/g, to: 'bg-on-surface/5' },
+    { from: /bg-white\/10\b/g, to: 'bg-on-surface/10' },
+    { from: /bg-white\/15\b/g, to: 'bg-on-surface/15' },
+    { from: /bg-white\/20\b/g, to: 'bg-on-surface/20' },
+    { from: /bg-white\/\[0\.02\]/g, to: 'bg-on-surface/[0.02]' },
+    { from: /bg-white\/\[0\.03\]/g, to: 'bg-on-surface/[0.03]' },
+    { from: /bg-white\/\[0\.04\]/g, to: 'bg-on-surface/[0.04]' },
+    { from: /bg-white\/\[0\.05\]/g, to: 'bg-on-surface/[0.05]' },
+    { from: /border-white\/([0-9]+)/g, to: 'border-on-surface/$1' },
+    { from: /border-white\/\[0\.([0-9]+)\]/g, to: 'border-on-surface/[0.$1]' },
+    { from: /shadow-\[([a-zA-Z0-9_\-,\(\)\. ]+)\]/g, to: 'shadow-lg' },
+];
+
+function processDir(dir) {
+    const files = fs.readdirSync(dir);
+    
+    for (const file of files) {
+        const fullPath = path.join(dir, file);
+        const stat = fs.statSync(fullPath);
+        
+        if (stat.isDirectory()) {
+            processDir(fullPath);
+        } else if (file.endsWith('.tsx') && !file.includes('hero-section') && !file.includes('animated-shader-hero') && !file.includes('ai-input-hero')) {
+            let content = fs.readFileSync(fullPath, 'utf8');
+            let originalContent = content;
+            
+            for (const r of replacements) {
+                content = content.replace(r.from, r.to);
+            }
+            
+            if (content !== originalContent) {
+                fs.writeFileSync(fullPath, content, 'utf8');
+                console.log('Updated:', fullPath);
+            }
+        }
+    }
+}
+
+targetDirs.forEach(dir => processDir(dir));
+console.log('UI Component Hardcode Reference Swept Successfully!');

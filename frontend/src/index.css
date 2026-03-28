@@ -1,0 +1,398 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  --color-on-primary-container: var(--on-primary-container);
+  --color-tertiary-fixed: var(--tertiary-fixed);
+  --color-on-tertiary: var(--on-tertiary);
+  --color-on-secondary-container: var(--on-secondary-container);
+  --color-outline-variant: var(--outline-variant);
+  --color-on-tertiary-fixed-variant: var(--on-tertiary-fixed-variant);
+  --color-surface-container-low: var(--surface-container-low);
+  --color-surface-container: var(--surface-container);
+  --color-on-tertiary-fixed: var(--on-tertiary-fixed);
+  --color-on-secondary-fixed-variant: var(--on-secondary-fixed-variant);
+  --color-tertiary: var(--tertiary);
+  --color-on-primary-fixed-variant: var(--on-primary-fixed-variant);
+  --color-surface-container-high: var(--surface-container-high);
+  --color-on-primary-fixed: var(--on-primary-fixed);
+  --color-inverse-surface: var(--inverse-surface);
+  --color-surface-variant: var(--surface-variant);
+  --color-surface-dim: var(--surface-dim);
+  --color-on-primary: var(--on-primary);
+  --color-on-background: var(--on-background);
+  --color-inverse-on-surface: var(--inverse-on-surface);
+  --color-tertiary-container: var(--tertiary-container);
+  --color-on-secondary: var(--on-secondary);
+  --color-tertiary-fixed-dim: var(--tertiary-fixed-dim);
+  --color-on-tertiary-container: var(--on-tertiary-container);
+  --color-on-surface: var(--on-surface);
+  --color-on-error-container: var(--on-error-container);
+  --color-inverse-primary: var(--inverse-primary);
+  --color-surface-bright: var(--surface-bright);
+  --color-primary-fixed-dim: var(--primary-fixed-dim);
+  --color-error-container: var(--error-container);
+  --color-surface: var(--surface);
+  --color-secondary-fixed-dim: var(--secondary-fixed-dim);
+  --color-secondary-container: var(--secondary-container);
+  --color-surface-container-highest: var(--surface-container-highest);
+  --color-surface-container-lowest: var(--surface-container-lowest);
+  --color-on-secondary-fixed: var(--on-secondary-fixed);
+  --color-secondary-fixed: var(--secondary-fixed);
+  --color-on-surface-variant: var(--on-surface-variant);
+  --color-primary-fixed: var(--primary-fixed);
+  --color-outline: var(--outline);
+  --color-primary-container: var(--primary-container);
+  --color-surface-tint: var(--surface-tint);
+  --color-error: var(--error);
+  --color-on-error: var(--on-error);
+
+  --font-headline: "Anton", "Outfit", var(--font-sans);
+  --font-body: "Plus Jakarta Sans", var(--font-sans);
+  --font-label: "Plus Jakarta Sans", var(--font-sans);
+
+  --radius-DEFAULT: 0.125rem;
+  --radius-xl: 0.5rem;
+  --radius-full: 0.75rem;
+}
+
+
+:root {
+  --on-primary-container: #ffffff;
+  --tertiary-fixed: #52525b;
+  --on-tertiary: #ffffff;
+  --on-secondary-container: #52525b;
+  --outline-variant: #e4e4e7;
+  --on-tertiary-fixed-variant: #ffffff;
+  --surface-container-low: #ffffff;
+  --surface-container: #f4f4f5;
+  --on-tertiary-fixed: #ffffff;
+  --on-secondary-fixed-variant: #e4e4e7;
+  --tertiary: #1e1e1e;
+  --on-primary-fixed-variant: #ffffff;
+  --surface-container-high: #f4f4f5;
+  --on-primary-fixed: #ffffff;
+  --inverse-surface: #27272a;
+  --surface-variant: #e4e4e7;
+  --surface-dim: #ffffff;
+  --on-primary: #ffffff;
+  --on-background: #27272a;
+  --inverse-on-surface: #f4f4f5;
+  --tertiary-container: #ffffff;
+  --on-secondary: #f4f4f5;
+  --tertiary-fixed-dim: #1e1e1e;
+  --on-tertiary-container: #ffffff;
+  --on-surface: #27272a;
+  --on-error-container: #18181b;
+  --inverse-primary: #ffffff;
+  --surface-bright: #e4e4e7;
+  --primary-fixed-dim: #52525b;
+  --error-container: #a1a1aa;
+  --surface: #ffffff;
+  --secondary-fixed-dim: #52525b;
+  --secondary-container: #e4e4e7;
+  --surface-container-highest: #e4e4e7;
+  --surface-container-lowest: #ffffff;
+  --on-secondary-fixed: #ffffff;
+  --secondary-fixed: #27272a;
+  --on-surface-variant: #52525b;
+  --primary-fixed: #27272a;
+  --outline: #1e1e1e;
+  --primary-container: #1e1e1e;
+  --surface-tint: #52525b;
+  --error: #18181b;
+  --on-error: #d4d4d8;
+}
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+  --primary: 222.2 47.4% 11.2%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 222.2 84% 4.9%;
+  --radius: 0.5rem;
+}
+
+
+.dark {
+  --on-primary-container: #00285d;
+  --tertiary-fixed: #acedff;
+  --on-tertiary: #003640;
+  --on-secondary-container: #aeb9d0;
+  --outline-variant: #424754;
+  --on-tertiary-fixed-variant: #004e5c;
+  --surface-container-low: #1c1b1b;
+  --surface-container: #201f1f;
+  --on-tertiary-fixed: #001f26;
+  --on-secondary-fixed-variant: #3c475a;
+  --tertiary: #4cd7f6;
+  --on-primary-fixed-variant: #004395;
+  --surface-container-high: #2a2a2a;
+  --on-primary-fixed: #001a42;
+  --inverse-surface: #e5e2e1;
+  --surface-variant: #353534;
+  --surface-dim: #131313;
+  --on-primary: #002e6a;
+  --on-background: #e5e2e1;
+  --inverse-on-surface: #313030;
+  --tertiary-container: #009eb9;
+  --on-secondary: #263143;
+  --tertiary-fixed-dim: #4cd7f6;
+  --on-tertiary-container: #002f38;
+  --on-surface: #e5e2e1;
+  --on-error-container: #ffdad6;
+  --inverse-primary: #005ac2;
+  --surface-bright: #393939;
+  --primary-fixed-dim: #adc6ff;
+  --error-container: #93000a;
+  --surface: #131313;
+  --secondary-fixed-dim: #bcc7de;
+  --secondary-container: #3e495d;
+  --surface-container-highest: #353534;
+  --surface-container-lowest: #0e0e0e;
+  --on-secondary-fixed: #111c2d;
+  --secondary-fixed: #d8e3fb;
+  --on-surface-variant: #c2c6d6;
+  --primary-fixed: #d8e2ff;
+  --outline: #8c909f;
+  --primary-container: #4d8eff;
+  --surface-tint: #adc6ff;
+  --error: #ffb4ab;
+  --on-error: #690005;
+}
+
+.dark {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+  --popover: 222.2 84% 4.9%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 210 40% 98%;
+  --primary-foreground: 222.2 47.4% 11.2%;
+  --secondary: 217.2 32.6% 17.5%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+  --accent: 217.2 32.6% 17.5%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  --ring: 212.7 26.8% 83.9%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+    font-feature-settings: "rlig" 1, "calt" 1;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+}
+
+.glass-card {
+  background: rgba(53, 53, 52, 0.6);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+.glass-button {
+  background: rgba(53, 53, 52, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(66, 71, 84, 0.4);
+  border-radius: 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.glass-button:hover {
+  background: rgba(66, 71, 84, 0.6);
+  border-color: rgba(173, 198, 255, 0.25);
+}
+
+.glass-border {
+  border: 1px solid rgba(66, 71, 84, 0.35);
+}
+
+.nav-pill {
+  background: rgba(19, 19, 19, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(66, 71, 84, 0.3);
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+
+.text-gradient {
+  background: linear-gradient(135deg, #adc6ff 0%, #4d8eff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cta-gradient {
+  background: linear-gradient(135deg, #adc6ff 0%, #4d8eff 100%);
+}
+
+.ghost-border {
+  border: 1px solid rgba(66, 71, 84, 0.15);
+}
+
+.lab-bg::before {
+  overflow: hidden;
+  max-width: 100vw;
+  max-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* From Uiverse.io by doniaskima */ 
+.btn-53,
+.btn-53 *,
+.btn-53 :after,
+.btn-53 :before,
+.btn-53:after,
+.btn-53:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+
+.btn-53 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #000;
+  background-image: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: var(--font-headline);
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 999px;
+  display: block;
+  font-weight: 900;
+  overflow: hidden;
+  padding: 0.8rem 2.5rem;
+  position: relative;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.btn-53:hover {
+  border-color: #fff;
+  box-shadow: 0 0 20px rgba(255,255,255,0.1);
+}
+
+.btn-53:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.btn-53 .original {
+  background: #fff;
+  color: #000;
+  display: grid;
+  inset: 0;
+  place-content: center;
+  position: absolute;
+  transition: transform 0.3s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.btn-53:hover .original {
+  transform: translateY(100%);
+}
+
+.btn-53 .letters {
+  display: inline-flex;
+}
+
+.btn-53 span {
+  opacity: 0;
+  transform: translateY(-15px);
+  transition: transform 0.3s cubic-bezier(0.87, 0, 0.13, 1), opacity 0.3s;
+}
+
+.btn-53 span:nth-child(2n) {
+  transform: translateY(15px);
+}
+
+.btn-53:hover span {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn-53:hover span:nth-child(2) { transition-delay: 0.05s; }
+.btn-53:hover span:nth-child(3) { transition-delay: 0.1s; }
+.btn-53:hover span:nth-child(4) { transition-delay: 0.15s; }
+.btn-53:hover span:nth-child(5) { transition-delay: 0.2s; }
+.btn-53:hover span:nth-child(6) { transition-delay: 0.25s; }
+.btn-53:hover span:nth-child(7) { transition-delay: 0.3s; }
+.btn-53:hover span:nth-child(8) { transition-delay: 0.35s; }
+.btn-53:hover span:nth-child(9) { transition-delay: 0.4s; }
+.btn-53:hover span:nth-child(10) { transition-delay: 0.45s; }
+.btn-53:hover span:nth-child(11) { transition-delay: 0.5s; }
+.btn-53:hover span:nth-child(12) { transition-delay: 0.55s; }

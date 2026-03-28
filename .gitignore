@@ -1,0 +1,52 @@
+# -----------------------
+# JavaScript / Frontend
+# -----------------------
+node_modules/
+dist/
+dist-ssr/
+build/
+.npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# -----------------------
+# Python Backend
+# -----------------------
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.venv/
+.cache/
+# Ignore locally persisted SQLite DBs
+*.db
+*.sqlite3
+# Ignore locally uploaded compliance PDFs/CSVs
+backend/uploads/
+uploads/
+test.csv
+
+# -----------------------
+# Security / Secrets
+# -----------------------
+.env
+.env.*
+*.pem
+*.key
+firestore-service-account.json
+creds/
+
+# -----------------------
+# IDE / OS / Temp Scripts
+# -----------------------
+.DS_Store
+.DS_Store?
+.vscode/
+.idea/
+.fleet/
+*.cjs
+*.log
+*.tmp
+temp/
